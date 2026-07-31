@@ -1,0 +1,88 @@
+/* =========================
+   BUTTONS
+   Datenal Technologies
+   ========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+  transition: var(--transition-base);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary);
+  border-color: white;
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+.btn-lg {
+  padding: 16px 30px;
+  font-size: 16px;
+}
+
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+/* Responsive Buttons */
+@media (max-width: 600px) {
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}

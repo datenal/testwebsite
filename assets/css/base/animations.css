@@ -1,0 +1,95 @@
+/* =========================
+   ANIMATIONS
+   Datenal Technologies
+   ========================= */
+
+/* Hero Scroll Animation */
+@keyframes heroScroll {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* Fade Animation */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Pulse (for emergency/attention) */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover Transitions */
+* {
+  transition: var(--transition-base);
+}
+
+/* Card Hover Animations */
+.card:hover,
+.service-card:hover,
+.value-card:hover,
+.why-card:hover,
+.advantage-card:hover,
+.promise-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Step Card Hover */
+.step-card:hover,
+.process-step:hover .step-content {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Pricing Card Hover */
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Button Hover */
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary);
+}
+
+/* FAQ Icon Rotation */
+.faq-question[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+/* Scroll-triggered animations (JavaScript enabled) */
+.process-step,
+.advantage-card,
+.promise-card,
+.industry-card {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}

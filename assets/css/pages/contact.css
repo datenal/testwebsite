@@ -1,0 +1,160 @@
+/* =========================
+   CONTACT / REQUEST FORM
+   Datenal Technologies
+   ========================= */
+
+/* Contact Page Hero (reuses home hero) */
+.contact-hero {
+  background: linear-gradient(90deg, rgba(5, 29, 70, .98), rgba(10, 61, 145, .92));
+  color: white;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  right: -170px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Sidebar Card */
+.sidebar-card {
+  background: var(--bg-light);
+  padding: 35px 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-card h3 {
+  font-size: 20px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.sidebar-card p {
+  color: var(--text-body);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 25px 0;
+}
+
+.sidebar-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.sidebar-info i {
+  font-size: 20px;
+  color: var(--primary);
+  width: 28px;
+  text-align: center;
+}
+
+.sidebar-info div {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.sidebar-info div strong {
+  color: var(--text-dark);
+  display: block;
+  font-size: 15px;
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.success-message.visible {
+  display: block;
+}
+
+.success-message .success-icon {
+  font-size: 72px;
+  color: #22c55e;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.success-message h2 {
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.success-message p {
+  color: var(--text-body);
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 25px;
+}
+
+.success-message .btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Contact */
+@media (max-width: 1024px) {
+  .form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .sidebar-card {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-hero {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    min-height: 400px;
+  }
+  
+  .success-message .btn-group {
+    flex-direction: column;
+  }
+  
+  .success-message .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

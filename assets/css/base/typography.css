@@ -1,0 +1,79 @@
+/* =========================
+   TYPOGRAPHY
+   Datenal Technologies
+   ========================= */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+}
+
+/* Section Headings */
+.section-heading {
+  max-width: 700px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-heading.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading small {
+  display: block;
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-md);
+  word-wrap: break-word;
+}
+
+.section-heading p {
+  color: var(--text-body);
+  font-size: clamp(15px, 1vw, 17px);
+}
+
+/* Eyebrow / Labels */
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 18px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: rgba(255,255,255,0.8);
+  transition: var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+/* Lists */
+ul, ol {
+  list-style: none;
+}

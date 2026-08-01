@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>IT Support · Datenal Technologies</title>
+  <meta name="description" content="Professional IT Support South Africa. Reliable business IT support, computer repair, network troubleshooting, and managed IT services from Datenal Technologies." />
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* =========================
+       RESET & BASE (mirror homepage)
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    /* =========================
+       HEADER (exact same as homepage)
+    ========================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: nowrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: clamp(16px, 2vw, 20px);
+      color: #0A3D91;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      max-width: 100%;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #0A3D91;
+    }
+    .nav-button {
+      background: #0A3D91;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 5px;
+    }
+    .nav-button:hover {
+      background: #082f70;
+    }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 22px;
+      color: #0A3D91;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO (homepage style)
+    ========================= */
+    .hero {
+      background: linear-gradient(90deg, rgba(5, 29, 70, .98), rgba(10, 61, 145, .92));
+      color: white;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      right: -170px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero-content {
+      width: 680px;
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7de3f5;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+      word-wrap: break-word;
+    }
+    .hero h1 span {
+      color: #00B4D8;
+    }
+    .hero p {
+      max-width: 620px;
+      font-size: clamp(16px, 1.2vw, 18px);
+      color: #e4edf8;
+      margin-bottom: 35px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s ease;
+      text-align: center;
+    }
+    .btn-primary {
+      background: #00B4D8;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #009abd;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+    }
+    .btn-outline:hover {
+      background: white;
+      color: #0A3D91;
+    }
+
+    /* =========================
+       GENERAL SECTIONS (homepage style)
+    ========================= */
+    section {
+      padding: 90px 0;
+      width: 100%;
+    }
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-heading small {
+      display: block;
+      color: #0A3D91;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      color: #172033;
+      margin-bottom: 15px;
+      word-wrap: break-word;
+    }
+    .section-heading p {
+      color: #667085;
+      font-size: clamp(15px, 1vw, 17px);
+    }
+
+    /* =========================
+       OVERVIEW (two-column, homepage about style)
+    ========================= */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .overview-image {
+      min-height: 300px;
+      background: linear-gradient(135deg, #0A3D91, #062657);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .overview-image::before {
+      content: "";
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba(255,255,255,.15);
+      transform: rotate(45deg);
+    }
+    .overview-symbol {
+      position: absolute;
+      color: white;
+      font-size: 70px;
+      opacity: 0.7;
+    }
+    .overview-text h2 {
+      font-size: clamp(32px, 3.5vw, 40px);
+      line-height: 1.15;
+      color: #172033;
+      margin-bottom: 18px;
+    }
+    .overview-text p {
+      color: #667085;
+      margin-bottom: 20px;
+      font-size: clamp(15px, 1vw, 16px);
+    }
+
+    /* =========================
+       SERVICES CARDS (homepage service card style)
+    ========================= */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      border: 1px solid #e5e7eb;
+      padding: 30px 25px;
+      background: white;
+      transition: .25s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #b9d5f5;
+      box-shadow: 0 12px 35px rgba(15, 44, 80, .08);
+    }
+    .service-card .icon-wrap {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: #edf5ff;
+      color: #0A3D91;
+      font-size: 20px;
+      margin-bottom: 22px;
+      border-radius: 5px;
+    }
+    .service-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: #172033;
+    }
+    .service-card p {
+      color: #667085;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       WHY CHOOSE / BENEFITS (homepage card style)
+    ========================= */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .why-card {
+      border: 1px solid #e5e7eb;
+      padding: 30px 25px;
+      background: white;
+      transition: .25s ease;
+    }
+    .why-card:hover {
+      transform: translateY(-5px);
+      border-color: #b9d5f5;
+      box-shadow: 0 12px 35px rgba(15, 44, 80, .08);
+    }
+    .why-card i {
+      font-size: 28px;
+      color: #0A3D91;
+      margin-bottom: 18px;
+    }
+    .why-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: #172033;
+    }
+    .why-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* =========================
+       PROCESS (simple timeline)
+    ========================= */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .step-card {
+      background: #f7f9fc;
+      padding: 25px 20px;
+      border-radius: 5px;
+      text-align: center;
+      border-bottom: 4px solid #0A3D91;
+      transition: 0.25s ease;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(15, 44, 80, .08);
+    }
+    .step-num {
+      display: inline-block;
+      background: #0A3D91;
+      color: white;
+      font-weight: 800;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    .step-card i {
+      font-size: 26px;
+      color: #0A3D91;
+      margin-bottom: 12px;
+    }
+    .step-card h4 {
+      color: #172033;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+    .step-card p {
+      font-size: 14px;
+      color: #667085;
+    }
+
+    /* =========================
+   PRICING CARDS
+========================= */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.pricing-card {
+  border: 1px solid #e5e7eb;
+  padding: 35px 25px;
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: .25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(15, 44, 80, .1);
+}
+
+.pricing-card.featured {
+  border-color: #0A3D91;
+  background: #f7f9fc;
+}
+
+.pricing-card .price-badge {
+  display: inline-block;
+  background: #0A3D91;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  color: #172033;
+  margin-bottom: 8px;
+}
+
+.pricing-card .price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0A3D91;
+  margin-bottom: 8px;
+}
+
+.pricing-card .price small {
+  font-size: 14px;
+  font-weight: 400;
+  color: #667085;
+}
+
+.pricing-card ul {
+  list-style: none;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.pricing-card ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.pricing-card ul li i {
+  color: #00B4D8;
+  margin-right: 10px;
+  width: 18px;
+}
+
+/* =========================
+   PRICING RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pricing-grid .pricing-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pricing-grid .pricing-card:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-card {
+    padding: 25px 18px;
+  }
+}
+
+    /* =========================
+       FAQ (accordion style)
+    ========================= */
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 18px 0;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: #172033;
+      cursor: pointer;
+      transition: .2s;
+    }
+    .faq-question:hover {
+      color: #0A3D91;
+    }
+    .faq-question i {
+      color: #0A3D91;
+      transition: .25s;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: #667085;
+      font-size: 15px;
+    }
+    .faq-answer.open {
+      max-height: 300px;
+      padding-top: 15px;
+    }
+
+    /* =========================
+       CTA (homepage style)
+    ========================= */
+    .cta {
+      background: #0A3D91;
+      color: white;
+    }
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .cta h2 {
+      font-size: clamp(28px, 4vw, 43px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      color: #dce8f7;
+      max-width: 650px;
+      font-size: clamp(15px, 1vw, 17px);
+    }
+    .cta .btn {
+      background: white;
+      color: #0A3D91;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       FOOTER (exact homepage)
+    ========================= */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 60px 0 25px;
+      width: 100%;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+    }
+    .footer-brand {
+      max-width: 330px;
+    }
+    .footer-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    footer h4 {
+      color: white;
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+    footer ul {
+      list-style: none;
+    }
+    footer li {
+      margin-bottom: 10px;
+    }
+    footer li a {
+      color: #9ca3af;
+      font-size: 13px;
+      transition: .2s;
+    }
+    footer li a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      border-top: 1px solid #293241;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 12px;
+      color: #8993a3;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       MOBILE (mirror homepage)
+    ========================= */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        padding: 15px 5%;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+      }
+      .nav-button {
+        border-radius: 0;
+        text-align: center;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero {
+        min-height: 500px;
+      }
+      .hero h1 {
+        font-size: clamp(28px, 8vw, 42px);
+        letter-spacing: -1px;
+      }
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 768px) {
+      .services-grid, .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 12px;
+        width: 96%;
+      }
+      .navbar {
+        min-height: 70px;
+      }
+      .logo img {
+        height: 55px;
+      }
+      section {
+        padding: 50px 0;
+      }
+      .services-grid, .why-grid, .process-steps {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .cta .btn {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+      }
+      .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .overview-image {
+        min-height: 220px;
+      }
+    }
+    @media (max-width: 400px) {
+      .hero {
+        min-height: 420px;
+      }
+      .hero h1 {
+        font-size: clamp(24px, 7vw, 32px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =========================
+     HEADER (Updated: "Why Datenal" replaced with "Request Form",
+     and all links point to real pages)
+========================= -->
+<header>
+  <div class="container navbar">
+    <a href="index.html" class="logo">
+      <img src="datenal-logo.png" alt="Datenal Technologies Logo" />
+    </a>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <!-- "Why Datenal" removed, replaced with "Request Form" -->
+      <a href="request-form.html">Request Form</a>
+      <a href="contact.html" class="nav-button">Contact Us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow"><i class="fa-regular fa-circle-check" style="margin-right: 8px;"></i> IT Support</span>
+      <h1>Professional IT Support <span>That Keeps Your Business Running</span></h1>
+      <p>Technology problems can interrupt productivity, delay operations, and affect customer service. Datenal Technologies provides dependable IT support for businesses and individuals, helping resolve technical issues quickly while keeping your systems secure, reliable, and performing at their best.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">Request IT Support <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="services.html" class="btn btn-outline">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     OVERVIEW
+========================= -->
+<section style="background: #f7f9fc;">
+  <div class="container overview-grid">
+    <div class="overview-image">
+      <div class="overview-symbol"><i class="fa-solid fa-headset"></i></div>
+    </div>
+    <div class="overview-text">
+      <div class="section-heading" style="margin-bottom:20px;">
+        <small>Overview</small>
+        <h2>Reliable IT Support for Modern Businesses</h2>
+      </div>
+      <p>Every organisation depends on technology to communicate, serve customers, and manage daily operations. When computers, software, networks, or business systems stop working, productivity suffers.</p>
+      <p>Datenal Technologies provides practical IT support designed to minimise downtime, solve technical problems efficiently, and keep your business operating smoothly. Whether you require occasional technical assistance or ongoing support, we deliver dependable solutions tailored to your needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     SERVICES (cards)
+========================= -->
+<section id="services">
+  <div class="container">
+    <div class="section-heading center">
+      <small>What we can help with</small>
+      <h2>Our IT Support Services</h2>
+      <p>Our IT support services cover the everyday technology challenges businesses face, from troubleshooting computers to maintaining reliable network connectivity.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-desktop"></i></div><h3>Computer Troubleshooting</h3><p>Diagnosing and resolving hardware and software issues.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-laptop"></i></div><h3>Laptop &amp; Desktop Support</h3><p>Professional maintenance, upgrades, and repairs.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-brands fa-windows"></i></div><h3>Microsoft Windows Support</h3><p>Installation, configuration, optimisation, and troubleshooting.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-download"></i></div><h3>Software Installation</h3><p>Installing, updating, and configuring business applications.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-print"></i></div><h3>Printer &amp; Peripheral Support</h3><p>Connecting and maintaining printers and office devices.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-envelope"></i></div><h3>Email Configuration</h3><p>Business email setup and troubleshooting.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-shield-virus"></i></div><h3>Virus &amp; Malware Removal</h3><p>Removing threats while helping protect your systems.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-database"></i></div><h3>Data Backup Assistance</h3><p>Helping safeguard important business information.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-wifi"></i></div><h3>Remote IT Support</h3><p>Fast assistance without waiting for an on-site visit.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-truck"></i></div><h3>On-site Technical Support</h3><p>Professional support delivered at your premises when required.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-network-wired"></i></div><h3>Network Troubleshooting</h3><p>Resolving connectivity and communication issues.</p></div>
+      <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-gears"></i></div><h3>Preventative Maintenance</h3><p>Keeping systems updated and reducing future problems.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     WHY CHOOSE + BENEFITS
+========================= -->
+<section style="background: #f7f9fc;" id="why">
+  <div class="container">
+    <div class="section-heading center">
+      <small>Why Datenal</small>
+      <h2>Why Choose Datenal Technologies?</h2>
+      <p>Businesses need more than someone who fixes computers—they need a technology partner they can rely on.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><i class="fa-solid fa-clock"></i><h3>Reliable Support</h3><p>Responsive assistance whenever technical issues arise.</p></div>
+      <div class="why-card"><i class="fa-solid fa-bullseye"></i><h3>Business-Focused Solutions</h3><p>Technology recommendations based on business goals.</p></div>
+      <div class="why-card"><i class="fa-solid fa-user-tie"></i><h3>Professional Service</h3><p>Clear communication, dependable workmanship, and attention to detail.</p></div>
+      <div class="why-card"><i class="fa-solid fa-handshake"></i><h3>Long-Term Partnership</h3><p>Helping your technology grow alongside your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     BENEFITS (additional)
+========================= -->
+<section>
+  <div class="container">
+    <div class="section-heading center">
+      <small>Benefits</small>
+      <h2>The Benefits of Professional IT Support</h2>
+      <p>Reduced downtime, improved productivity, more secure systems, professional advice, longer equipment lifespan, predictable technology support, and peace of mind. Focus on running your business while we manage your technology.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><i class="fa-solid fa-gauge-high"></i><h3>Reduced Downtime</h3><p>Quick resolution keeps your business moving.</p></div>
+      <div class="why-card"><i class="fa-solid fa-chart-simple"></i><h3>Improved Productivity</h3><p>Your team works without technology interruptions.</p></div>
+      <div class="why-card"><i class="fa-solid fa-lock"></i><h3>More Secure Systems</h3><p>Protection from threats and vulnerabilities.</p></div>
+      <div class="why-card"><i class="fa-solid fa-headset"></i><h3>Peace of Mind</h3><p>Know that your technology is in professional hands.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     PROCESS
+========================= -->
+<section style="background: #f7f9fc;">
+  <div class="container">
+    <div class="section-heading center">
+      <small>Our process</small>
+      <h2>Our IT Support Process</h2>
+      <p>Simple, transparent, and designed to get you back to work quickly.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card"><div class="step-num">1</div><i class="fa-solid fa-phone"></i><h4>Contact Us</h4><p>Tell us about your issue.</p></div>
+      <div class="step-card"><div class="step-num">2</div><i class="fa-solid fa-magnifying-glass"></i><h4>Assessment</h4><p>We identify the root cause.</p></div>
+      <div class="step-card"><div class="step-num">3</div><i class="fa-solid fa-wrench"></i><h4>Solution</h4><p>We resolve the issue using the most effective approach.</p></div>
+      <div class="step-card"><div class="step-num">4</div><i class="fa-solid fa-check"></i><h4>Testing</h4><p>We ensure everything works correctly.</p></div>
+      <div class="step-card"><div class="step-num">5</div><i class="fa-solid fa-headset"></i><h4>Ongoing Support</h4><p>We're available whenever you need assistance.</p></div>
+    </div>
+  </div>
+</section>
+
+  <!-- =========================
+     PRICING - New
+========================= -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-heading center">
+      <small>Choose your plan</small>
+      <h2>IT Support Plans &amp; Pricing</h2>
+      <p>Every business has different IT requirements, so we offer flexible support plans designed to fit your specific needs and budget.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Basic Support -->
+      <div class="pricing-card">
+        <h3>Basic Support</h3>
+        <div class="price">From <span style="font-size:32px;">R</span> <span style="font-size:32px;">499</span> <small>/mo</small></div>
+        <p style="color:#667085; font-size:14px; margin-bottom:15px;">Suitable for startups and small businesses.</p>
+        <ul>
+          <li><i class="fa-regular fa-check"></i> Remote support</li>
+          <li><i class="fa-regular fa-check"></i> Business hours assistance</li>
+          <li><i class="fa-regular fa-check"></i> Basic maintenance</li>
+          <li><i class="fa-regular fa-check"></i> Security updates</li>
+          <li><i class="fa-regular fa-check"></i> Email support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Request Quote</a>
+      </div>
+
+      <!-- Business Support (Featured) -->
+      <div class="pricing-card featured">
+        <span class="price-badge">Most Popular</span>
+        <h3>Business Support</h3>
+        <div class="price">From <span style="font-size:32px;">R</span> <span style="font-size:32px;">1,499</span> <small>/mo</small></div>
+        <p style="color:#667085; font-size:14px; margin-bottom:15px;">Designed for growing businesses.</p>
+        <ul>
+          <li><i class="fa-regular fa-check"></i> Everything in Basic</li>
+          <li><i class="fa-regular fa-check"></i> Priority support</li>
+          <li><i class="fa-regular fa-check"></i> On-site visits</li>
+          <li><i class="fa-regular fa-check"></i> Network support</li>
+          <li><i class="fa-regular fa-check"></i> Preventative maintenance</li>
+          <li><i class="fa-regular fa-check"></i> Monthly health checks</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Get Started</a>
+      </div>
+
+      <!-- Premium Managed IT -->
+      <div class="pricing-card">
+        <h3>Premium Managed IT</h3>
+        <div class="price" style="font-size:24px;">Custom Quote</div>
+        <p style="color:#667085; font-size:14px; margin-bottom:15px;">Designed for businesses that require comprehensive IT management.</p>
+        <ul>
+          <li><i class="fa-regular fa-check"></i> Unlimited support</li>
+          <li><i class="fa-regular fa-check"></i> Priority response</li>
+          <li><i class="fa-regular fa-check"></i> Dedicated technician</li>
+          <li><i class="fa-regular fa-check"></i> Server monitoring</li>
+          <li><i class="fa-regular fa-check"></i> Advanced cybersecurity</li>
+          <li><i class="fa-regular fa-check"></i> Backup monitoring</li>
+          <li><i class="fa-regular fa-check"></i> Strategic IT advice</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Talk to an Expert</a>
+      </div>
+    </div>
+
+    <!-- Pricing Note -->
+    <div style="text-align:center; margin-top:30px; padding:20px; background:#f7f9fc; border-radius:8px; border-left:4px solid #0A3D91;">
+      <p style="color:#667085; font-size:14px; margin:0;">
+        <i class="fa-regular fa-circle-info" style="color:#0A3D91; margin-right:10px;"></i>
+        All prices are starting estimates. Final pricing depends on business size, number of users, devices, locations, and service requirements.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FAQ (accordion)
+========================= -->
+<section>
+  <div class="container">
+    <div class="section-heading center">
+      <small>Questions?</small>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What businesses do you support? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">We support small to medium-sized businesses, startups, and organisations across various industries including retail, corporate, education, healthcare, and more.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Do you offer remote IT support? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">Yes, we provide fast remote support for many technical issues, allowing us to resolve problems without needing an on-site visit.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Do you provide on-site support? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">Absolutely. When a problem requires physical attention, we send a technician to your premises to resolve the issue professionally.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can you maintain our computers? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">Yes, we offer preventative maintenance, updates, and regular health checks to keep your systems running smoothly and reduce future problems.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can you help with slow computers? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">We diagnose and resolve performance issues, from hardware upgrades to software optimisation, to restore speed and reliability.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Do you remove viruses and malware? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">Yes, we remove viruses, spyware, and other malware, and we also advise on best practices to help protect your systems going forward.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Do you install software? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">We install, configure, and update business software and applications to ensure they work correctly with your existing systems.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can you support small businesses? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">Yes, we specialise in providing affordable, practical IT support tailored to the needs and budgets of small businesses.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">How quickly can you respond? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">We prioritise urgent issues and aim to respond as quickly as possible. Remote support can often begin within hours, and on-site visits are scheduled at the earliest convenience.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     CTA (homepage style)
+========================= -->
+<section class="cta" id="contact">
+  <div class="container cta-content">
+    <div>
+      <h2>Need Reliable IT Support?</h2>
+      <p>Whether you need help resolving a technical problem, improving your business technology, or ongoing IT support, Datenal Technologies is ready to help. Let us provide practical, dependable technology solutions that keep your business moving forward.</p>
+    </div>
+    <a href="contact.html" class="btn">Contact Us Today <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER (Updated: added Hosting & Software Solutions,
+     removed "Why Datenal", added Request Form)
+========================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Datenal Technologies</div>
+        <p>Practical IT solutions, technical support and digital services for modern businesses.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services-it-support.html">IT Support</a></li>
+          <li><a href="services-web-development.html">Website Development</a></li>
+          <li><a href="services-networking.html">Networking</a></li>
+          <li><a href="services-hardware.html">Hardware Solutions</a></li>
+          <!-- Hosting & Software Solutions added -->
+          <li><a href="services-hosting.html">Hosting</a></li>
+          <li><a href="services-software-solutions.html">Software Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="process.html">Our Process</a></li>
+          <li><a href="why-choose.html">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help-centre.html">Help Centre</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="remote-support.html">Remote Support</a></li>
+          <!-- Request Form added -->
+          <li><a href="request-form.html">Request Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Datenal Technologies (Pty) Ltd. All rights reserved.</span>
+      <span>
+        <a href="privacy-policy.html">Privacy Policy</a> ·
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================
+     JAVASCRIPT (menu + FAQ)
+========================= -->
+<script>
+  // Menu toggle
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("active");
+    const icon = menuToggle.querySelector("i");
+    if (mainNav.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      mainNav.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
+  });
+
+  // FAQ accordion
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const icon = el.querySelector("i");
+    if (answer.classList.contains("open")) {
+      answer.classList.remove("open");
+      icon.style.transform = "rotate(0deg)";
+    } else {
+      // close others
+      document.querySelectorAll(".faq-answer").forEach(a => a.classList.remove("open"));
+      document.querySelectorAll(".faq-question i").forEach(i => i.style.transform = "rotate(0deg)");
+      answer.classList.add("open");
+      icon.style.transform = "rotate(180deg)";
+    }
+  }
+</script>
+
+</body>
+</html>

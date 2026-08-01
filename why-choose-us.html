@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Why Choose Us · Datenal Technologies</title>
+  <meta name="description" content="Discover why businesses trust Datenal Technologies for reliable IT support, networking, website development, hardware, and hosting solutions." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* =========================
+       RESET & BASE
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: nowrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: clamp(16px, 2vw, 20px);
+      color: #0A3D91;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      max-width: 100%;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #0A3D91;
+    }
+    .nav-button {
+      background: #0A3D91;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 5px;
+    }
+    .nav-button:hover {
+      background: #082f70;
+    }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 22px;
+      color: #0A3D91;
+      cursor: pointer;
+    }
+
+    /* =========================
+       SECTION HEADING
+    ========================= */
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-heading small {
+      display: block;
+      color: #0A3D91;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      color: #172033;
+      margin-bottom: 15px;
+      word-wrap: break-word;
+    }
+    .section-heading p {
+      color: #667085;
+      font-size: clamp(15px, 1vw, 17px);
+    }
+
+    /* =========================
+       WHY CHOOSE US - CUSTOM STYLES
+    ========================= */
+    #why-choose {
+      padding: 90px 0;
+      background: #ffffff;
+    }
+
+    /* Core Advantages Grid */
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .advantage-card {
+      border: 1px solid #e5e7eb;
+      padding: 35px 28px;
+      background: white;
+      border-radius: 12px;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .advantage-card:hover {
+      transform: translateY(-8px);
+      border-color: #b9d5f5;
+      box-shadow: 0 15px 40px rgba(15, 44, 80, 0.08);
+    }
+
+    .advantage-icon {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      background: #edf5ff;
+      color: #0A3D91;
+      font-size: 26px;
+      border-radius: 14px;
+      margin: 0 auto 18px;
+      transition: 0.3s ease;
+    }
+
+    .advantage-card:hover .advantage-icon {
+      background: #0A3D91;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .advantage-card h3 {
+      font-size: 20px;
+      color: #172033;
+      margin-bottom: 10px;
+    }
+
+    .advantage-card p {
+      color: #667085;
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* =========================
+       STATISTICS
+    ========================= */
+    .stats-section {
+      background: #f7f9fc;
+      padding: 70px 0;
+      margin-top: 20px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: #0A3D91;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: #4b5563;
+      font-weight: 600;
+    }
+
+    /* =========================
+       COMMITMENT CARD
+    ========================= */
+    .commitment-card {
+      background: #f7f9fc;
+      padding: 50px 45px;
+      border-radius: 16px;
+      border-left: 6px solid #0A3D91;
+      margin-top: 20px;
+    }
+
+    .commitment-card h3 {
+      font-size: 28px;
+      color: #172033;
+      margin-bottom: 12px;
+    }
+
+    .commitment-card p {
+      color: #667085;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0;
+    }
+
+    /* =========================
+       CUSTOMER PROMISE
+    ========================= */
+    .promise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .promise-card {
+      border: 1px solid #e5e7eb;
+      padding: 30px 25px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s ease;
+      border-top: 4px solid #0A3D91;
+    }
+
+    .promise-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(15, 44, 80, 0.06);
+    }
+
+    .promise-icon {
+      font-size: 32px;
+      color: #0A3D91;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .promise-card h4 {
+      font-size: 17px;
+      color: #172033;
+      margin-bottom: 6px;
+    }
+
+    .promise-card p {
+      color: #667085;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* =========================
+       BUTTONS & CTA
+    ========================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #00B4D8;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #009abd;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #0A3D91;
+      border-color: white;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       CTA SECTION
+    ========================= */
+    .why-cta {
+      background: #0A3D91;
+      color: white;
+      padding: 80px 0;
+    }
+
+    .why-cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .why-cta .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7de3f5;
+      margin-bottom: 18px;
+    }
+
+    .why-cta h2 {
+      font-size: clamp(28px, 4vw, 43px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .why-cta p {
+      color: #dce8f7;
+      max-width: 650px;
+      font-size: clamp(15px, 1vw, 17px);
+    }
+
+    .why-cta .btn {
+      padding: 14px 28px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 60px 0 25px;
+      width: 100%;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+    }
+    .footer-brand {
+      max-width: 330px;
+    }
+    .footer-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    footer h4 {
+      color: white;
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+    footer ul {
+      list-style: none;
+    }
+    footer li {
+      margin-bottom: 10px;
+    }
+    footer li a {
+      color: #9ca3af;
+      font-size: 13px;
+      transition: .2s;
+    }
+    footer li a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      border-top: 1px solid #293241;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 12px;
+      color: #8993a3;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .promise-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        padding: 15px 5%;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+      }
+      .nav-button {
+        border-radius: 0;
+        text-align: center;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .why-cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .why-cta-content .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .advantages-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .promise-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      #why-choose {
+        padding: 60px 0;
+      }
+      .stats-section {
+        padding: 50px 0;
+      }
+      .commitment-card {
+        padding: 30px 25px;
+      }
+      .commitment-card h3 {
+        font-size: 24px;
+      }
+      .why-cta {
+        padding: 60px 0;
+      }
+      .stat-number {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 12px;
+        width: 96%;
+      }
+      .navbar {
+        min-height: 70px;
+      }
+      .logo img {
+        height: 55px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      #why-choose {
+        padding: 50px 0;
+      }
+      .why-cta {
+        padding: 50px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .advantages-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      .promise-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-number {
+        font-size: 30px;
+      }
+      .advantage-card {
+        padding: 25px 20px;
+      }
+      .commitment-card {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =========================
+     HEADER (Updated: "Why Datenal" replaced with "Request Form",
+     and all links point to real pages)
+========================= -->
+<header>
+  <div class="container navbar">
+    <a href="index.html" class="logo">
+      <img src="datenal-logo.png" alt="Datenal Technologies Logo" />
+    </a>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <!-- "Why Datenal" removed, replaced with "Request Form" -->
+      <a href="request-form.html">Request Form</a>
+      <a href="contact.html" class="nav-button">Contact Us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- =========================
+     WHY CHOOSE US SECTION
+========================= -->
+<section id="why-choose">
+  <div class="container">
+
+    <!-- Section Introduction -->
+    <div class="section-heading center">
+      <small>Why Datenal</small>
+      <h2>Why Choose Datenal Technologies?</h2>
+      <p>Businesses need more than just technology—they need a reliable partner who understands their goals. At Datenal Technologies, we combine technical expertise, responsive support, and tailored solutions to help businesses operate more efficiently, securely, and confidently.</p>
+    </div>
+
+    <!-- =========================
+         CORE ADVANTAGES
+    ========================= -->
+    <div class="advantages-grid">
+
+      <div class="advantage-card">
+        <div class="advantage-icon"><i class="fa-regular fa-shield-check"></i></div>
+        <h3>Reliable Expertise</h3>
+        <p>Our experienced team delivers dependable technology solutions backed by industry knowledge and a commitment to quality. We focus on solutions that are practical, secure, and built to support long-term business success.</p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-icon"><i class="fa-regular fa-headset"></i></div>
+        <h3>Fast &amp; Responsive Support</h3>
+        <p>Technology problems can interrupt productivity. We respond quickly to minimise downtime and keep your business running with reliable remote and on-site support.</p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-icon"><i class="fa-regular fa-puzzle-piece"></i></div>
+        <h3>Tailored Business Solutions</h3>
+        <p>Every business is different. We take the time to understand your needs and recommend IT, networking, website, hosting, and hardware solutions that fit your goals and budget.</p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-icon"><i class="fa-regular fa-lock"></i></div>
+        <h3>Security First</h3>
+        <p>Protecting your systems and data is a priority. Our solutions are designed with security, reliability, and best practices in mind to help reduce business risks.</p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-icon"><i class="fa-regular fa-chart-line"></i></div>
+        <h3>Scalable Technology</h3>
+        <p>As your business grows, your technology should grow with it. We implement scalable solutions that can adapt to your changing requirements without unnecessary complexity.</p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-icon"><i class="fa-regular fa-handshake"></i></div>
+        <h3>Long-Term Partnership</h3>
+        <p>We believe in building lasting relationships, not one-time projects. Our team remains available to provide ongoing support, advice, maintenance, and technology guidance whenever you need it.</p>
+      </div>
+
+    </div>
+
+    <!-- =========================
+         BY THE NUMBERS
+    ========================= -->
+    <div class="stats-section" style="border-radius: 16px; margin-top: 50px;">
+      <div class="container" style="padding: 0;">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-count="99">99</span>
+            <span class="stat-label">% Client Satisfaction</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="15">15</span>
+            <span class="stat-label">Years Combined Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="50">50</span>
+            <span class="stat-label">Businesses Supported</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="100">100</span>
+            <span class="stat-label">% Commitment to Quality</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================
+         OUR COMMITMENT
+    ========================= -->
+    <div style="margin-top: 50px;">
+      <div class="commitment-card">
+        <h3>Committed to Your Success</h3>
+        <p>We aim to build long-term relationships by delivering dependable service, honest advice, and technology solutions that improve productivity, strengthen security, and support business growth. Every project is approached with transparency, professionalism, and a genuine commitment to customer satisfaction.</p>
+      </div>
+    </div>
+
+    <!-- =========================
+         CUSTOMER PROMISE
+    ========================= -->
+    <div style="margin-top: 50px;">
+      <div class="section-heading center" style="margin-bottom: 40px;">
+        <small>Our promise</small>
+        <h2>What You Can Expect</h2>
+        <p>We stand behind our work with a commitment to excellence in everything we do.</p>
+      </div>
+      <div class="promise-grid">
+        <div class="promise-card">
+          <span class="promise-icon"><i class="fa-regular fa-star"></i></span>
+          <h4>Professional Service</h4>
+          <p>We maintain high standards in every project and every interaction.</p>
+        </div>
+        <div class="promise-card">
+          <span class="promise-icon"><i class="fa-regular fa-circle-check"></i></span>
+          <h4>Honest Advice</h4>
+          <p>We recommend solutions that genuinely benefit your business.</p>
+        </div>
+        <div class="promise-card">
+          <span class="promise-icon"><i class="fa-regular fa-award"></i></span>
+          <h4>Quality Workmanship</h4>
+          <p>Every installation, website, and support service is completed with attention to detail.</p>
+        </div>
+        <div class="promise-card">
+          <span class="promise-icon"><i class="fa-regular fa-handshake"></i></span>
+          <h4>Ongoing Support</h4>
+          <p>Our relationship continues long after your project has been completed.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     CTA - PARTNER WITH US
+========================= -->
+<section class="why-cta">
+  <div class="container">
+    <div class="why-cta-content">
+      <div>
+        <span class="eyebrow">Ready to partner</span>
+        <h2>Partner with a Technology Team You Can Trust</h2>
+        <p>Whether you need managed IT support, business networking, website development, hardware solutions, or reliable hosting, Datenal Technologies is ready to help your business succeed with dependable, future-ready technology.</p>
+      </div>
+      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-outline">Contact Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER (Updated: added Hosting & Software Solutions,
+     removed "Why Datenal", added Request Form)
+========================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Datenal Technologies</div>
+        <p>Practical IT solutions, technical support and digital services for modern businesses.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services-it-support.html">IT Support</a></li>
+          <li><a href="services-web-development.html">Website Development</a></li>
+          <li><a href="services-networking.html">Networking</a></li>
+          <li><a href="services-hardware.html">Hardware Solutions</a></li>
+          <!-- Hosting & Software Solutions added -->
+          <li><a href="services-hosting.html">Hosting</a></li>
+          <li><a href="services-software-solutions.html">Software Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="process.html">Our Process</a></li>
+          <li><a href="why-choose.html">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help-centre.html">Help Centre</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="remote-support.html">Remote Support</a></li>
+          <!-- Request Form added -->
+          <li><a href="request-form.html">Request Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Datenal Technologies (Pty) Ltd. All rights reserved.</span>
+      <span>
+        <a href="privacy-policy.html">Privacy Policy</a> ·
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+  // =========================
+  // MENU TOGGLE
+  // =========================
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("active");
+    const icon = menuToggle.querySelector("i");
+    if (mainNav.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      mainNav.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
+  });
+
+  // =========================
+  // COUNTER ANIMATION
+  // =========================
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-count'));
+      const duration = 2000;
+      const step = Math.max(1, Math.floor(target / 60));
+      let current = 0;
+      
+      const updateCounter = () => {
+        current += step;
+        if (current >= target) {
+          counter.textContent = target + (counter.textContent.includes('%') ? '%' : '');
+          return;
+        }
+        counter.textContent = current;
+        requestAnimationFrame(updateCounter);
+      };
+      
+      // Check if element is visible
+      const rect = counter.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        updateCounter();
+      }
+    });
+  }
+
+  // Run on load and scroll
+  setTimeout(animateCounters, 500);
+  window.addEventListener('scroll', animateCounters);
+
+  // =========================
+  // SCROLL ANIMATION FOR ADVANTAGE CARDS
+  // =========================
+  if ('IntersectionObserver' in window) {
+    const cards = document.querySelectorAll('.advantage-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 80);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    cards.forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(25px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  }
+
+  // =========================
+  // SCROLL ANIMATION FOR PROMISE CARDS
+  // =========================
+  if ('IntersectionObserver' in window) {
+    const promises = document.querySelectorAll('.promise-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'scale(1)';
+          }, index * 60);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    promises.forEach((promise, index) => {
+      promise.style.opacity = '0';
+      promise.style.transform = 'scale(0.95)';
+      promise.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(promise);
+    });
+  }
+</script>
+
+</body>
+</html>

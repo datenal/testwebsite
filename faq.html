@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>IT Support · Datenal Technologies</title>
+  <meta name="description" content="Professional IT Support South Africa. Reliable business IT support, computer repair, network troubleshooting, and managed IT services from Datenal Technologies." />
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* =========================
+       RESET & BASE (mirror homepage)
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    /* =========================
+       HEADER (exact same as homepage)
+    ========================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: nowrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: clamp(16px, 2vw, 20px);
+      color: #0A3D91;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      max-width: 100%;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #0A3D91;
+    }
+    .nav-button {
+      background: #0A3D91;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 5px;
+    }
+    .nav-button:hover {
+      background: #082f70;
+    }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 22px;
+      color: #0A3D91;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO (homepage style)
+    ========================= */
+    .hero {
+      background: linear-gradient(90deg, rgba(5, 29, 70, .98), rgba(10, 61, 145, .92));
+      color: white;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      right: -170px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero-content {
+      width: 680px;
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7de3f5;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+      word-wrap: break-word;
+    }
+    .hero h1 span {
+      color: #00B4D8;
+    }
+    .hero p {
+      max-width: 620px;
+      font-size: clamp(16px, 1.2vw, 18px);
+      color: #e4edf8;
+      margin-bottom: 35px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s ease;
+      text-align: center;
+    }
+    .btn-primary {
+      background: #00B4D8;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #009abd;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+    }
+    .btn-outline:hover {
+      background: white;
+      color: #0A3D91;
+    }
+
+    /* =========================
+       GENERAL SECTIONS (homepage style)
+    ========================= */
+    section {
+      padding: 90px 0;
+      width: 100%;
+    }
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-heading small {
+      display: block;
+      color: #0A3D91;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      color: #172033;
+      margin-bottom: 15px;
+      word-wrap: break-word;
+    }
+    .section-heading p {
+      color: #667085;
+      font-size: clamp(15px, 1vw, 17px);
+    }
+
+    /* =========================
+       FAQ - UNIVERSAL STYLES
+    ========================= */
+    .faq-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-category {
+      margin-bottom: 40px;
+    }
+
+    .faq-category-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      color: #0A3D91;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .faq-category-title i {
+      font-size: 24px;
+      color: #0A3D91;
+    }
+
+    .faq-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background: white;
+      transition: all 0.25s ease;
+      overflow: hidden;
+    }
+
+    .faq-item:hover {
+      border-color: #b9d5f5;
+      box-shadow: 0 4px 15px rgba(15, 44, 80, 0.06);
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 18px 24px;
+      background: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      color: #172033;
+      text-align: left;
+      transition: background 0.2s ease;
+      font-family: inherit;
+      line-height: 1.4;
+    }
+
+    .faq-question:hover {
+      background: #f7f9fc;
+    }
+
+    .faq-question i {
+      color: #0A3D91;
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-left: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-question[aria-expanded="true"] i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+      padding: 0 24px;
+      color: #667085;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .faq-answer.open {
+      max-height: 500px;
+      padding: 0 24px 24px 24px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+    }
+
+    /* Closing CTA */
+    .faq-cta {
+      text-align: center;
+      margin-top: 50px;
+      padding: 40px 30px;
+      background: #f7f9fc;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .faq-cta h3 {
+      font-size: 24px;
+      color: #172033;
+      margin-bottom: 10px;
+    }
+
+    .faq-cta p {
+      color: #667085;
+      font-size: 16px;
+      max-width: 550px;
+      margin: 0 auto 25px;
+    }
+
+    .faq-cta-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .faq-cta-buttons .btn-outline {
+      border-color: #0A3D91;
+      color: #0A3D91;
+    }
+
+    .faq-cta-buttons .btn-outline:hover {
+      background: #0A3D91;
+      color: white;
+    }
+
+    /* =========================
+       CTA (homepage style)
+    ========================= */
+    .cta {
+      background: #0A3D91;
+      color: white;
+    }
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .cta h2 {
+      font-size: clamp(28px, 4vw, 43px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      color: #dce8f7;
+      max-width: 650px;
+      font-size: clamp(15px, 1vw, 17px);
+    }
+    .cta .btn {
+      background: white;
+      color: #0A3D91;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       FOOTER (exact homepage)
+    ========================= */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 60px 0 25px;
+      width: 100%;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+    }
+    .footer-brand {
+      max-width: 330px;
+    }
+    .footer-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    footer h4 {
+      color: white;
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+    footer ul {
+      list-style: none;
+    }
+    footer li {
+      margin-bottom: 10px;
+    }
+    footer li a {
+      color: #9ca3af;
+      font-size: 13px;
+      transition: .2s;
+    }
+    footer li a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      border-top: 1px solid #293241;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 12px;
+      color: #8993a3;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       FAQ RESPONSIVE
+    ========================= */
+    @media (max-width: 768px) {
+      .faq-question {
+        font-size: 15px;
+        padding: 15px 18px;
+      }
+      
+      .faq-answer {
+        font-size: 14px;
+      }
+      
+      .faq-answer.open {
+        padding: 0 18px 18px 18px;
+      }
+      
+      .faq-category-title {
+        font-size: 19px;
+      }
+      
+      .faq-cta {
+        padding: 30px 20px;
+      }
+      
+      .faq-cta h3 {
+        font-size: 21px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .faq-question {
+        font-size: 14px;
+        padding: 13px 15px;
+      }
+      
+      .faq-answer.open {
+        padding: 0 15px 15px 15px;
+      }
+      
+      .faq-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .faq-cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+    }
+
+    /* =========================
+       MOBILE (mirror homepage)
+    ========================= */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+    }
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        padding: 15px 5%;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+      }
+      .nav-button {
+        border-radius: 0;
+        text-align: center;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero {
+        min-height: 500px;
+      }
+      .hero h1 {
+        font-size: clamp(28px, 8vw, 42px);
+        letter-spacing: -1px;
+      }
+      .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 12px;
+        width: 96%;
+      }
+      .navbar {
+        min-height: 70px;
+      }
+      .logo img {
+        height: 55px;
+      }
+      section {
+        padding: 50px 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .cta .btn {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+      }
+      .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 400px) {
+      .hero {
+        min-height: 420px;
+      }
+      .hero h1 {
+        font-size: clamp(24px, 7vw, 32px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =========================
+     HEADER (Updated: "Why Datenal" replaced with "Request Form",
+     and all links point to real pages)
+========================= -->
+<header>
+  <div class="container navbar">
+    <a href="index.html" class="logo">
+      <img src="datenal-logo.png" alt="Datenal Technologies Logo" />
+    </a>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <!-- "Why Datenal" removed, replaced with "Request Form" -->
+      <a href="request-form.html">Request Form</a>
+      <a href="contact.html" class="nav-button">Contact Us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow"><i class="fa-regular fa-circle-check" style="margin-right: 8px;"></i> IT Support</span>
+      <h1>Professional IT Support <span>That Keeps Your Business Running</span></h1>
+      <p>Technology problems can interrupt productivity, delay operations, and affect customer service. Datenal Technologies provides dependable IT support for businesses and individuals, helping resolve technical issues quickly while keeping your systems secure, reliable, and performing at their best.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">Request IT Support <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="services.html" class="btn btn-outline">Explore Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FAQ - UNIVERSAL SECTION
+========================= -->
+<section id="faq" style="background: #ffffff;">
+  <div class="container">
+    <div class="section-heading center">
+      <small>Got questions?</small>
+      <h2>Frequently Asked Questions</h2>
+      <p>Find answers to some of the most common questions about our services. If you don't find what you're looking for, our team is always ready to help.</p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="faq-container" role="tablist" aria-multiselectable="false">
+      
+      <!-- =========================
+           IT SUPPORT FAQ
+      ========================= -->
+      <div class="faq-category">
+        <h3 class="faq-category-title">
+          <i class="fa-regular fa-headset"></i> IT Support
+        </h3>
+        
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer1" id="question1">
+            <span>What does your IT support service include?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer1" role="tabpanel" aria-labelledby="question1">
+            <p>Our IT support includes computer troubleshooting, software installation, hardware diagnostics, virus and malware removal, network troubleshooting, email configuration, printer support, and general technical assistance for businesses of all sizes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer2" id="question2">
+            <span>Do you offer remote IT support?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer2" role="tabpanel" aria-labelledby="question2">
+            <p>Yes. We provide remote IT support for many technical issues, allowing us to resolve problems quickly without waiting for an on-site visit. This means faster response times and less disruption to your business.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer3" id="question3">
+            <span>Can you provide on-site support?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer3" role="tabpanel" aria-labelledby="question3">
+            <p>Absolutely. When a problem requires physical attention, we send a qualified technician to your premises to resolve the issue professionally and efficiently.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer4" id="question4">
+            <span>Do you offer monthly IT support plans?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer4" role="tabpanel" aria-labelledby="question4">
+            <p>Yes. We offer flexible monthly support plans designed to suit different business sizes and requirements. These plans provide predictable costs and priority support for your business.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer5" id="question5">
+            <span>How quickly do you respond to support requests?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer5" role="tabpanel" aria-labelledby="question5">
+            <p>We prioritise urgent issues and aim to respond as quickly as possible. Remote support can often begin within hours, and on-site visits are scheduled at the earliest convenience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer6" id="question6">
+            <span>Can you support both Windows and Mac computers?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer6" role="tabpanel" aria-labelledby="question6">
+            <p>Yes. Our team has experience supporting both Windows and Mac operating systems, ensuring all your devices receive the professional support they need.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer7" id="question7">
+            <span>Do you assist with network problems?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer7" role="tabpanel" aria-labelledby="question7">
+            <p>Yes. We diagnose and resolve network issues including connectivity problems, slow internet, Wi-Fi coverage issues, and router or switch malfunctions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer8" id="question8">
+            <span>Can you help protect our business from cyber threats?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer8" role="tabpanel" aria-labelledby="question8">
+            <p>Absolutely. We implement security best practices including virus and malware protection, firewall configuration, security updates, and advice on keeping your business data safe.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer9" id="question9">
+            <span>What happens if we have an IT emergency?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer9" role="tabpanel" aria-labelledby="question9">
+            <p>We treat IT emergencies with priority. Contact us immediately and we'll work quickly to diagnose the issue, restore your systems, and minimise downtime for your business.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer10" id="question10">
+            <span>Why should we choose Datenal Technologies for IT support?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer10" role="tabpanel" aria-labelledby="question10">
+            <p>We provide reliable, practical IT support focused on solving problems quickly and preventing future issues. Our team communicates clearly, works professionally, and builds long-term partnerships with our clients.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           NETWORKING FAQ
+      ========================= -->
+      <div class="faq-category">
+        <h3 class="faq-category-title">
+          <i class="fa-regular fa-network-wired"></i> Networking
+        </h3>
+        
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer11" id="question11">
+            <span>What networking services do you provide?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer11" role="tabpanel" aria-labelledby="question11">
+            <p>We provide network design, installation, configuration, and support for businesses. This includes wired and wireless networks, router and switch setup, firewall configuration, and network troubleshooting.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer12" id="question12">
+            <span>Can you install office Wi-Fi?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer12" role="tabpanel" aria-labelledby="question12">
+            <p>Yes. We install reliable, secure Wi-Fi networks for offices, ensuring strong coverage throughout your workspace and secure access for your team and guests.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer13" id="question13">
+            <span>Do you install network cabling?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer13" role="tabpanel" aria-labelledby="question13">
+            <p>Yes. We professionally install structured network cabling to ensure reliable, high-speed connectivity throughout your office or premises.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer14" id="question14">
+            <span>Can you upgrade our existing network?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer14" role="tabpanel" aria-labelledby="question14">
+            <p>Absolutely. We assess your current network infrastructure and recommend upgrades to improve speed, reliability, and capacity to support your growing business needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer15" id="question15">
+            <span>Do you configure routers, switches and firewalls?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer15" role="tabpanel" aria-labelledby="question15">
+            <p>Yes. We configure and optimise routers, switches, and firewalls to ensure your network performs reliably and securely.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer16" id="question16">
+            <span>Can you connect multiple office locations?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer16" role="tabpanel" aria-labelledby="question16">
+            <p>Yes. We design and implement network solutions that connect multiple office locations securely, allowing seamless communication and data sharing across your organisation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer17" id="question17">
+            <span>How do you improve network performance?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer17" role="tabpanel" aria-labelledby="question17">
+            <p>We improve network performance by optimising configurations, upgrading equipment where needed, implementing quality of service (QoS), and ensuring your infrastructure is properly maintained.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer18" id="question18">
+            <span>Can you troubleshoot slow internet or connectivity issues?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer18" role="tabpanel" aria-labelledby="question18">
+            <p>Yes. We diagnose and resolve slow internet and connectivity issues, identifying the root cause and implementing the most effective solution.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer19" id="question19">
+            <span>How long does a networking project usually take?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer19" role="tabpanel" aria-labelledby="question19">
+            <p>Timelines vary based on project complexity. A small office network can often be installed within 2-3 days, while larger projects may take 1-2 weeks. We provide a clear schedule during planning.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer20" id="question20">
+            <span>Why choose Datenal Technologies for networking solutions?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer20" role="tabpanel" aria-labelledby="question20">
+            <p>We design and install reliable, secure networks that keep your business connected and productive. Our team provides professional service, clear communication, and ongoing support to ensure your network performs at its best.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           HARDWARE SOLUTIONS FAQ
+      ========================= -->
+      <div class="faq-category">
+        <h3 class="faq-category-title">
+          <i class="fa-regular fa-microchip"></i> Hardware Solutions
+        </h3>
+        
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer21" id="question21">
+            <span>What hardware products do you supply?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer21" role="tabpanel" aria-labelledby="question21">
+            <p>We supply business computers, laptops, servers, printers, networking equipment, peripherals, and other office technology from trusted manufacturers.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer22" id="question22">
+            <span>Can you recommend the right hardware for my business?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer22" role="tabpanel" aria-labelledby="question22">
+            <p>Yes. We assess your business requirements and recommend hardware that balances performance, reliability, and budget to meet your specific needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer23" id="question23">
+            <span>Do you install new computers and laptops?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer23" role="tabpanel" aria-labelledby="question23">
+            <p>Yes. We professionally install and configure new computers and laptops, ensuring they are set up correctly and ready for use from day one.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer24" id="question24">
+            <span>Can you upgrade existing computers?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer24" role="tabpanel" aria-labelledby="question24">
+            <p>Yes. We offer hardware upgrades including additional RAM, SSD storage, and other components to improve performance and extend the life of your existing equipment.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer25" id="question25">
+            <span>Do you supply printers and accessories?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer25" role="tabpanel" aria-labelledby="question25">
+            <p>Yes. We supply and install business printers, scanners, and other office accessories to support your daily operations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer26" id="question26">
+            <span>Do you provide warranty support?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer26" role="tabpanel" aria-labelledby="question26">
+            <p>Yes. We assist with warranty claims and provide support to ensure your hardware is repaired or replaced according to manufacturer terms.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer27" id="question27">
+            <span>Can you replace faulty hardware?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer27" role="tabpanel" aria-labelledby="question27">
+            <p>Yes. We diagnose faulty hardware and arrange replacement or repair to minimise downtime and disruption to your business.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer28" id="question28">
+            <span>Do you offer hardware maintenance?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer28" role="tabpanel" aria-labelledby="question28">
+            <p>Yes. We provide preventative maintenance and repairs to extend equipment lifespan, reduce downtime, and keep your technology running smoothly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer29" id="question29">
+            <span>Can you equip an entire office?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer29" role="tabpanel" aria-labelledby="question29">
+            <p>Yes. We handle end-to-end office hardware deployment, including procurement, installation, configuration, and support for all your technology needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer30" id="question30">
+            <span>Why choose Datenal Technologies for hardware solutions?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer30" role="tabpanel" aria-labelledby="question30">
+            <p>We provide reliable hardware, professional installation, and ongoing support to ensure your technology works as hard as you do. Our team offers trusted advice and practical solutions tailored to your business.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           WEBSITE DEVELOPMENT FAQ
+      ========================= -->
+      <div class="faq-category">
+        <h3 class="faq-category-title">
+          <i class="fa-regular fa-code"></i> Website Development
+        </h3>
+        
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer31" id="question31">
+            <span>How long does it take to build a website?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer31" role="tabpanel" aria-labelledby="question31">
+            <p>Timelines vary based on complexity. A typical business website takes 4-8 weeks, but we work with you to establish a clear schedule from the start.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer32" id="question32">
+            <span>How much does a business website cost?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer32" role="tabpanel" aria-labelledby="question32">
+            <p>Costs depend on the complexity and features required. We offer packages starting from R4,999 and provide clear quotes based on your specific needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer33" id="question33">
+            <span>Will my website work on mobile devices?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer33" role="tabpanel" aria-labelledby="question33">
+            <p>Yes. Every website we build is fully responsive and tested to perform flawlessly across desktops, tablets, and smartphones.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer34" id="question34">
+            <span>Can you redesign my existing website?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer34" role="tabpanel" aria-labelledby="question34">
+            <p>Absolutely. We specialise in modernising outdated websites with improved design, functionality, and user experience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer35" id="question35">
+            <span>Do you provide website hosting?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer35" role="tabpanel" aria-labelledby="question35">
+            <p>Yes. We offer reliable website hosting packages and can assist with domain registration and deployment to ensure a smooth launch.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer36" id="question36">
+            <span>Will my website be SEO-friendly?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer36" role="tabpanel" aria-labelledby="question36">
+            <p>Yes. We build websites with strong SEO foundations including clean code, fast loading, and proper metadata to support visibility in search engines over time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer37" id="question37">
+            <span>Can I update the website myself?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer37" role="tabpanel" aria-labelledby="question37">
+            <p>Yes. We can build websites with easy-to-use content management systems so you can make simple updates yourself without needing technical expertise.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer38" id="question38">
+            <span>Do you provide ongoing maintenance?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer38" role="tabpanel" aria-labelledby="question38">
+            <p>Yes. We offer maintenance packages that include updates, backups, security checks, and performance monitoring to keep your website running smoothly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer39" id="question39">
+            <span>Can you build online stores or booking systems?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer39" role="tabpanel" aria-labelledby="question39">
+            <p>Yes. We develop e-commerce websites and custom booking systems that allow customers to browse products, make purchases, and schedule services online.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer40" id="question40">
+            <span>Why choose Datenal Technologies for website development?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer40" role="tabpanel" aria-labelledby="question40">
+            <p>We create professional websites that combine modern design, reliable performance, and practical functionality. Our team listens to your goals and builds solutions that support your business growth.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+           HOSTING FAQ
+      ========================= -->
+      <div class="faq-category">
+        <h3 class="faq-category-title">
+          <i class="fa-regular fa-server"></i> Hosting
+        </h3>
+        
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer41" id="question41">
+            <span>What hosting services do you offer?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer41" role="tabpanel" aria-labelledby="question41">
+            <p>We offer website hosting, business email hosting, cloud hosting, VPS hosting, and managed hosting solutions to suit different business needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer42" id="question42">
+            <span>Which hosting package is right for my business?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer42" role="tabpanel" aria-labelledby="question42">
+            <p>The right package depends on your website size, traffic, and specific needs. Our team can assess your requirements and recommend the best solution for your business.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer43" id="question43">
+            <span>Can you migrate my existing website?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer43" role="tabpanel" aria-labelledby="question43">
+            <p>Yes. We handle the entire migration process, including planning, secure data transfer, testing, and go-live support to minimise downtime.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer44" id="question44">
+            <span>Do you provide business email hosting?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer44" role="tabpanel" aria-labelledby="question44">
+            <p>Yes. We offer professional email hosting with your domain, spam protection, and reliable uptime to strengthen your business communication.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer45" id="question45">
+            <span>Is an SSL certificate included?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer45" role="tabpanel" aria-labelledby="question45">
+            <p>Yes. All our hosting packages include free SSL certificates to secure your website and protect customer data.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer46" id="question46">
+            <span>How secure is your hosting?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer46" role="tabpanel" aria-labelledby="question46">
+            <p>We implement security best practices including firewalls, malware monitoring, daily backups, and secure infrastructure to protect your data.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer47" id="question47">
+            <span>What is your uptime guarantee?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer47" role="tabpanel" aria-labelledby="question47">
+            <p>We maintain a 99.9% uptime guarantee to ensure your website and email services remain accessible when your customers need them.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer48" id="question48">
+            <span>Can I upgrade my hosting package later?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer48" role="tabpanel" aria-labelledby="question48">
+            <p>Absolutely. Our hosting solutions are designed to scale with your business. You can upgrade at any time as your needs grow.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer49" id="question49">
+            <span>Do you perform regular backups?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer49" role="tabpanel" aria-labelledby="question49">
+            <p>Yes. Backup frequency depends on your package. Starter plans include weekly backups, Business plans include daily backups, and Enterprise plans include hourly backups.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="tab">
+          <button class="faq-question" aria-expanded="false" aria-controls="answer50" id="question50">
+            <span>Why choose Datenal Technologies for hosting?</span>
+            <i class="fa-regular fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer" id="answer50" role="tabpanel" aria-labelledby="question50">
+            <p>We provide secure, fast, and scalable hosting solutions backed by expert support. Our team ensures your website and email services are reliable, performant, and protected.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Closing CTA -->
+    <div class="faq-cta">
+      <h3>Still Have Questions?</h3>
+      <p>Our team is ready to discuss your requirements and recommend the best solution for your business.</p>
+      <div class="faq-cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="request-form.html" class="btn btn-outline" style="border-color:#0A3D91; color:#0A3D91;">Request Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     CTA (homepage style)
+========================= -->
+<section class="cta" id="contact">
+  <div class="container cta-content">
+    <div>
+      <h2>Need Reliable IT Support?</h2>
+      <p>Whether you need help resolving a technical problem, improving your business technology, or ongoing IT support, Datenal Technologies is ready to help. Let us provide practical, dependable technology solutions that keep your business moving forward.</p>
+    </div>
+    <a href="contact.html" class="btn">Contact Us Today <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER (Updated: added Hosting & Software Solutions,
+     removed "Why Datenal", added Request Form)
+========================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Datenal Technologies</div>
+        <p>Practical IT solutions, technical support and digital services for modern businesses.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services-it-support.html">IT Support</a></li>
+          <li><a href="services-web-development.html">Website Development</a></li>
+          <li><a href="services-networking.html">Networking</a></li>
+          <li><a href="services-hardware.html">Hardware Solutions</a></li>
+          <!-- Hosting & Software Solutions added -->
+          <li><a href="services-hosting.html">Hosting</a></li>
+          <li><a href="services-software-solutions.html">Software Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="process.html">Our Process</a></li>
+          <li><a href="why-choose.html">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help-centre.html">Help Centre</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="remote-support.html">Remote Support</a></li>
+          <!-- Request Form added -->
+          <li><a href="request-form.html">Request Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Datenal Technologies (Pty) Ltd. All rights reserved.</span>
+      <span>
+        <a href="privacy-policy.html">Privacy Policy</a> ·
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================
+     JAVASCRIPT (menu + FAQ)
+========================= -->
+<script>
+  // Menu toggle
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("active");
+    const icon = menuToggle.querySelector("i");
+    if (mainNav.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      mainNav.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
+  });
+
+  // =========================
+  // FAQ ACCORDION - Universal
+  // =========================
+  (function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    let currentlyOpen = null;
+
+    faqItems.forEach(item => {
+      const button = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      
+      // Ensure answer starts closed
+      answer.classList.remove('open');
+      button.setAttribute('aria-expanded', 'false');
+      
+      button.addEventListener('click', function(e) {
+        const isOpen = answer.classList.contains('open');
+        
+        // Close all FAQs
+        faqItems.forEach(otherItem => {
+          const otherButton = otherItem.querySelector('.faq-question');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          otherAnswer.classList.remove('open');
+          otherButton.setAttribute('aria-expanded', 'false');
+        });
+        
+        // Toggle the clicked one
+        if (!isOpen) {
+          answer.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+          currentlyOpen = item;
+        } else {
+          currentlyOpen = null;
+        }
+      });
+    });
+
+    // Keyboard support - Enter and Space keys
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+
+  })();
+</script>
+
+</body>
+</html>

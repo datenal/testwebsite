@@ -1,0 +1,150 @@
+/* =========================
+   SERVICES PAGES
+   Datenal Technologies
+   ========================= */
+
+/* Service Hero (reuses home hero) */
+.service-hero {
+  background: linear-gradient(90deg, rgba(5, 29, 70, .98), rgba(10, 61, 145, .92));
+  color: white;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.service-hero::after {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  right: -170px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Services Grid (reuses card styles) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Process Timeline (services pages) */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.step-card {
+  background: var(--bg-light);
+  padding: 25px 20px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border-bottom: 4px solid var(--primary);
+  transition: var(--transition-base);
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-num {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.step-card i {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.step-card h4 {
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: var(--text-body);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Responsive Services */
+@media (max-width: 900px) {
+  .service-hero {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .pricing-grid .pricing-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pricing-grid .pricing-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .service-hero {
+    min-height: 420px;
+  }
+}

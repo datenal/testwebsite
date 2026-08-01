@@ -1,9 +1,0 @@
-/* =========================
-   CONTAINER
-========================= */
-
-.container {
-    width: min(1180px, 92%);
-    margin: auto;
-    padding: 0 15px;
-}

@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Request a Service · Datenal Technologies</title>
+  <meta name="description" content="Submit a structured service request for IT support, networking, website development, hosting, hardware, and more. Get a professional response from Datenal Technologies." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* =========================
+       RESET & BASE
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: nowrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: clamp(16px, 2vw, 20px);
+      color: #0A3D91;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      max-width: 100%;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #0A3D91;
+    }
+    .nav-button {
+      background: #0A3D91;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 5px;
+    }
+    .nav-button:hover {
+      background: #082f70;
+    }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 22px;
+      color: #0A3D91;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+      background: linear-gradient(90deg, rgba(5, 29, 70, .98), rgba(10, 61, 145, .92));
+      color: white;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      right: -170px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero-content {
+      width: 680px;
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7de3f5;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      word-wrap: break-word;
+    }
+    .hero h1 span {
+      color: #00B4D8;
+    }
+    .hero p {
+      max-width: 620px;
+      font-size: clamp(16px, 1.2vw, 18px);
+      color: #e4edf8;
+      margin-bottom: 35px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s ease;
+      text-align: center;
+    }
+    .btn-primary {
+      background: #00B4D8;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #009abd;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+    }
+    .btn-outline:hover {
+      background: white;
+      color: #0A3D91;
+    }
+
+    /* =========================
+       SECTION HEADING
+    ========================= */
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-heading small {
+      display: block;
+      color: #0A3D91;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.15;
+      color: #172033;
+      margin-bottom: 15px;
+      word-wrap: break-word;
+    }
+    .section-heading p {
+      color: #667085;
+      font-size: clamp(15px, 1vw, 17px);
+    }
+
+    /* =========================
+       REQUEST FORM
+    ========================= */
+    .request-section {
+      padding: 70px 0 90px 0;
+      background: #ffffff;
+    }
+
+    .form-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .form-card {
+      background: #f7f9fc;
+      padding: 45px 40px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .form-section {
+      margin-bottom: 32px;
+    }
+
+    .form-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #172033;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0A3D91;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-section-title i {
+      color: #0A3D91;
+      font-size: 18px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-row-single {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 4px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      color: #172033;
+      margin-bottom: 5px;
+    }
+
+    .form-group label .required {
+      color: #dc2626;
+      margin-left: 2px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 5px;
+      font-size: 15px;
+      font-family: inherit;
+      background: white;
+      transition: 0.2s;
+      color: #1f2937;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #0A3D91;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(10, 61, 145, 0.12);
+    }
+
+    .form-group input.error,
+    .form-group select.error,
+    .form-group textarea.error {
+      border-color: #dc2626;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group .error-message {
+      color: #dc2626;
+      font-size: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .form-group .error-message.visible {
+      display: block;
+    }
+
+    /* Radio Group */
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 4px;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      cursor: pointer;
+      color: #4b5563;
+    }
+
+    .radio-group input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #0A3D91;
+      cursor: pointer;
+    }
+
+    .priority-note {
+      font-size: 13px;
+      color: #667085;
+      margin-top: 8px;
+      padding: 10px 16px;
+      background: #edf5ff;
+      border-radius: 5px;
+      border-left: 3px solid #0A3D91;
+    }
+
+    /* Checkbox Group */
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      cursor: pointer;
+      color: #4b5563;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #0A3D91;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* File Upload */
+    .file-upload-wrapper {
+      border: 2px dashed #d1d5db;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      background: white;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .file-upload-wrapper:hover {
+      border-color: #0A3D91;
+      background: #f7f9fc;
+    }
+
+    .file-upload-wrapper i {
+      font-size: 40px;
+      color: #0A3D91;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .file-upload-wrapper p {
+      color: #667085;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .file-upload-wrapper .file-types {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 6px;
+    }
+
+    .file-upload-wrapper input[type="file"] {
+      display: none;
+    }
+
+    .file-list {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .file-tag {
+      background: #edf5ff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #0A3D91;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .file-tag .remove-file {
+      cursor: pointer;
+      color: #dc2626;
+      font-weight: 700;
+    }
+
+    /* Submit */
+    .submit-section {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .submit-section .btn {
+      padding: 16px 50px;
+      font-size: 16px;
+    }
+
+    .submit-section .btn i {
+      font-size: 18px;
+    }
+
+    .submit-note {
+      color: #667085;
+      font-size: 14px;
+      margin-top: 14px;
+    }
+
+    /* =========================
+       RIGHT SIDEBAR
+    ========================= */
+    .sidebar-card {
+      background: #f7f9fc;
+      padding: 35px 30px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-card h3 {
+      font-size: 20px;
+      color: #172033;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-card p {
+      color: #667085;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .sidebar-divider {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 25px 0;
+    }
+
+    .sidebar-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-info i {
+      font-size: 20px;
+      color: #0A3D91;
+      width: 28px;
+      text-align: center;
+    }
+
+    .sidebar-info div {
+      font-size: 14px;
+      color: #4b5563;
+    }
+
+    .sidebar-info div strong {
+      color: #172033;
+      display: block;
+      font-size: 15px;
+    }
+
+    /* =========================
+       TRUST SECTION
+    ========================= */
+    .trust-section {
+      padding: 40px 0 70px 0;
+      background: #f7f9fc;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-card {
+      border: 1px solid #e5e7eb;
+      padding: 25px 20px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.25s ease;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-4px);
+      border-color: #b9d5f5;
+      box-shadow: 0 8px 25px rgba(15, 44, 80, 0.06);
+    }
+
+    .trust-card i {
+      font-size: 32px;
+      color: #0A3D91;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .trust-card h4 {
+      font-size: 16px;
+      color: #172033;
+      margin-bottom: 4px;
+    }
+
+    .trust-card p {
+      color: #667085;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* =========================
+       SUCCESS MESSAGE
+    ========================= */
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 40px 30px;
+    }
+
+    .success-message.visible {
+      display: block;
+    }
+
+    .success-message .success-icon {
+      font-size: 72px;
+      color: #22c55e;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .success-message h2 {
+      font-size: 28px;
+      color: #172033;
+      margin-bottom: 12px;
+    }
+
+    .success-message p {
+      color: #667085;
+      font-size: 16px;
+      max-width: 500px;
+      margin: 0 auto 25px;
+    }
+
+    .success-message .btn-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 60px 0 25px;
+      width: 100%;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+    }
+    .footer-brand {
+      max-width: 330px;
+    }
+    .footer-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    footer h4 {
+      color: white;
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+    footer ul {
+      list-style: none;
+    }
+    footer li {
+      margin-bottom: 10px;
+    }
+    footer li a {
+      color: #9ca3af;
+      font-size: 13px;
+      transition: .2s;
+    }
+    footer li a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      border-top: 1px solid #293241;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 12px;
+      color: #8993a3;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .form-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .sidebar-card {
+        position: static;
+      }
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        padding: 15px 5%;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+      }
+      .nav-button {
+        border-radius: 0;
+        text-align: center;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero {
+        min-height: 400px;
+      }
+      .hero h1 {
+        font-size: clamp(32px, 8vw, 44px);
+        letter-spacing: -1px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+      .radio-group {
+        gap: 12px;
+      }
+      .form-card {
+        padding: 30px 20px;
+      }
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .request-section {
+        padding: 50px 0 60px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 12px;
+        width: 96%;
+      }
+      .navbar {
+        min-height: 70px;
+      }
+      .logo img {
+        height: 55px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-card {
+        padding: 20px 16px;
+      }
+      .submit-section .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .success-message .btn-group {
+        flex-direction: column;
+      }
+      .success-message .btn-group .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero {
+        min-height: 360px;
+      }
+      .hero h1 {
+        font-size: clamp(26px, 7vw, 34px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+<header>
+  <div class="container navbar">
+    <a href="#" class="logo">
+      <img src="datenal-logo.png" alt="Datenal Technologies Logo" />
+    </a>
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#why">Why Datenal</a>
+      <a href="#contact" class="nav-button">Contact Us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow"><i class="fa-regular fa-pen-to-square" style="margin-right:8px;"></i> Request a Service</span>
+      <h1>Request a <span>Service</span></h1>
+      <p>Tell us what you need. Whether it's IT support, networking, website development, hosting, hardware, or another service, our team will review your request and contact you with the next steps.</p>
+      <div class="hero-buttons">
+        <a href="#request-form" class="btn btn-primary">Start Your Request <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     REQUEST FORM SECTION
+========================= -->
+<section class="request-section" id="request-form">
+  <div class="container">
+    <div class="form-wrapper">
+
+      <!-- Form -->
+      <div class="form-card" id="formContainer">
+        <form id="requestForm" novalidate>
+
+          <!-- Section 1 - Contact Information -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-user"></i> Contact Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span class="required">*</span></label>
+                <input type="text" id="firstName" placeholder="Enter your first name" required />
+                <div class="error-message" id="firstNameError">Please enter your first name.</div>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span class="required">*</span></label>
+                <input type="text" id="lastName" placeholder="Enter your last name" required />
+                <div class="error-message" id="lastNameError">Please enter your last name.</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="businessName">Business Name (optional)</label>
+                <input type="text" id="businessName" placeholder="Enter your business name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="you@business.co.za" required />
+                <div class="error-message" id="emailError">Please enter a valid email address.</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" placeholder="+27 12 345 6789" required />
+                <div class="error-message" id="phoneError">Please enter a valid phone number.</div>
+              </div>
+              <div class="form-group">
+                <label for="contactMethod">Preferred Contact Method</label>
+                <select id="contactMethod">
+                  <option value="Email">Email</option>
+                  <option value="Phone">Phone</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactTime">Preferred Contact Time</label>
+                <select id="contactTime">
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Anytime">Anytime</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2 - Service Required -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-list"></i> Service Required</div>
+            <div class="form-row-single">
+              <div class="form-group">
+                <label for="service">Choose a Service <span class="required">*</span></label>
+                <select id="service" required>
+                  <option value="">Select a service...</option>
+                  <option value="IT Support">IT Support</option>
+                  <option value="Networking">Networking</option>
+                  <option value="Website Development">Website Development</option>
+                  <option value="Website Hosting">Website Hosting</option>
+                  <option value="Software Solutions">Software Solutions</option>
+                  <option value="Hardware Support">Hardware Support</option>
+                  <option value="Remote Support">Remote Support</option>
+                  <option value="Email Solutions">Email Solutions</option>
+                  <option value="Cyber Security">Cyber Security</option>
+                  <option value="Cloud Services">Cloud Services</option>
+                  <option value="Software Installation">Software Installation</option>
+                  <option value="Business Consultation">Business Consultation</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="error-message" id="serviceError">Please select a service.</div>
+              </div>
+            </div>
+            <div class="form-row-single" id="otherServiceContainer" style="display:none;">
+              <div class="form-group">
+                <label for="otherService">Please describe the service</label>
+                <input type="text" id="otherService" placeholder="Describe the service you need..." />
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3 - Request Type -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-tag"></i> Request Type</div>
+            <div class="form-row-single">
+              <div class="form-group">
+                <label for="requestType">Choose one <span class="required">*</span></label>
+                <select id="requestType" required>
+                  <option value="">Select a request type...</option>
+                  <option value="New Project">New Project</option>
+                  <option value="Technical Support">Technical Support</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Upgrade">Upgrade</option>
+                  <option value="Consultation">Consultation</option>
+                  <option value="Emergency Support">Emergency Support</option>
+                  <option value="Quote Request">Quote Request</option>
+                </select>
+                <div class="error-message" id="requestTypeError">Please select a request type.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4 - Priority -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-flag"></i> Priority</div>
+            <div class="form-group">
+              <div class="radio-group">
+                <label><input type="radio" name="priority" value="Low" /> Low</label>
+                <label><input type="radio" name="priority" value="Normal" checked /> Normal</label>
+                <label><input type="radio" name="priority" value="High" /> High</label>
+                <label><input type="radio" name="priority" value="Critical" /> Critical</label>
+              </div>
+              <div class="priority-note"><i class="fa-regular fa-circle-info"></i> Critical requests should only be used for business-impacting issues.</div>
+            </div>
+          </div>
+
+          <!-- Section 5 - Subject -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-heading"></i> Subject</div>
+            <div class="form-row-single">
+              <div class="form-group">
+                <label for="subject">Brief summary of your request <span class="required">*</span></label>
+                <input type="text" id="subject" placeholder="e.g., Email configuration issue on multiple devices" required />
+                <div class="error-message" id="subjectError">Please enter a subject.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 6 - Request Details -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-message"></i> Request Details</div>
+            <div class="form-row-single">
+              <div class="form-group">
+                <label for="details">Please describe your request in as much detail as possible. <span class="required">*</span></label>
+                <textarea id="details" placeholder="Please describe your request in as much detail as possible.&#10;&#10;Examples:&#10;• What is happening?&#10;• When did it start?&#10;• What outcome are you expecting?&#10;• Any relevant information that could help us?" required></textarea>
+                <div class="error-message" id="detailsError">Please describe your request (minimum 10 characters).</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 7 - Project Information -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-folder-open"></i> Project Information</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="website">Business Website (optional)</label>
+                <input type="url" id="website" placeholder="https://yourbusiness.co.za" />
+              </div>
+              <div class="form-group">
+                <label for="employees">Number of Employees (optional)</label>
+                <input type="number" id="employees" placeholder="e.g., 10" min="1" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="industry">Business Industry (optional)</label>
+                <input type="text" id="industry" placeholder="e.g., Retail, Healthcare, Education" />
+              </div>
+              <div class="form-group">
+                <label for="budget">Estimated Budget</label>
+                <select id="budget">
+                  <option value="Under R5,000">Under R5,000</option>
+                  <option value="R5,000 – R10,000">R5,000 – R10,000</option>
+                  <option value="R10,000 – R25,000">R10,000 – R25,000</option>
+                  <option value="R25,000 – R50,000">R25,000 – R50,000</option>
+                  <option value="R50,000+">R50,000+</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row-single">
+              <div class="form-group">
+                <label for="completion">Expected Completion</label>
+                <select id="completion">
+                  <option value="As soon as possible">As soon as possible</option>
+                  <option value="Within a week">Within a week</option>
+                  <option value="Within a month">Within a month</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 8 - File Upload -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-paperclip"></i> File Upload</div>
+            <div class="form-group">
+              <div class="file-upload-wrapper" id="fileDropZone">
+                <i class="fa-regular fa-cloud-arrow-up"></i>
+                <p>Click or drag files to upload</p>
+                <p class="file-types">Supported: Images, PDFs, Word, ZIP, Screenshots</p>
+                <input type="file" id="fileInput" multiple accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.zip,.rar" />
+              </div>
+              <div class="file-list" id="fileList"></div>
+              <p style="font-size:13px; color:#9ca3af; margin-top:8px;">Attach screenshots, documents or any files that will help us understand your request.</p>
+            </div>
+          </div>
+
+          <!-- Section 9 - Communication Preferences -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-envelope"></i> Communication Preferences</div>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="preferences" value="updates" /> I would like status updates.</label>
+              <label><input type="checkbox" name="preferences" value="approval" /> Contact me before beginning any paid work.</label>
+              <label><input type="checkbox" name="preferences" value="quotation" /> Send me a quotation first.</label>
+              <label><input type="checkbox" name="preferences" value="ongoing" /> I am interested in ongoing support.</label>
+            </div>
+          </div>
+
+          <!-- Section 10 - Privacy -->
+          <div class="form-section">
+            <div class="form-section-title"><i class="fa-regular fa-shield"></i> Privacy</div>
+            <div class="form-group">
+              <label style="display:flex; align-items:flex-start; gap:12px; font-weight:400; cursor:pointer;">
+                <input type="checkbox" id="privacyConsent" style="width:18px; height:18px; margin-top:3px; accent-color:#0A3D91;" required />
+                <span style="font-size:14px; color:#4b5563;">I agree that Datenal may contact me regarding this request and process my information according to the <a href="#" style="color:#0A3D91; font-weight:600;">Privacy Policy</a> and <a href="#" style="color:#0A3D91; font-weight:600;">Terms &amp; Conditions</a>.</span>
+              </label>
+              <div class="error-message" id="privacyError">You must agree to the privacy policy.</div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="submit-section">
+            <button type="submit" class="btn btn-primary">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
+            <p class="submit-note">After submitting your request, we'll review the information and respond as soon as possible.</p>
+          </div>
+
+        </form>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+          <span class="success-icon"><i class="fa-regular fa-circle-check"></i></span>
+          <h2>Request Submitted Successfully</h2>
+          <p>Thank you for contacting Datenal Technologies. We've received your request and will review it shortly. One of our team members will contact you using your preferred communication method.</p>
+          <div class="btn-group">
+            <a href="#" class="btn btn-primary">Return Home <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="btn btn-outline" style="border-color:#0A3D91; color:#0A3D91;" onclick="resetForm()">Submit Another Request</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <aside class="sidebar-card">
+        <h3>Need Help Choosing?</h3>
+        <p>Not sure which service you need? Don't worry. Simply describe your issue and we'll identify the correct service for you.</p>
+
+        <hr class="sidebar-divider" />
+
+        <div class="sidebar-info">
+          <i class="fa-regular fa-clock"></i>
+          <div><strong>Average Response Time</strong> Within 24 hours</div>
+        </div>
+
+        <div class="sidebar-info">
+          <i class="fa-regular fa-calendar"></i>
+          <div><strong>Business Hours</strong> Monday – Friday, 08:00 – 17:00</div>
+        </div>
+
+        <div class="sidebar-info">
+          <i class="fa-regular fa-circle-exclamation"></i>
+          <div><strong>Emergency Support</strong> Available for urgent issues</div>
+        </div>
+
+        <div class="sidebar-info">
+          <i class="fa-regular fa-envelope"></i>
+          <div><strong>Email</strong> <a href="mailto:support@datenal.co.za" style="color:#0A3D91; font-weight:600;">support@datenal.co.za</a></div>
+        </div>
+
+        <div class="sidebar-info">
+          <i class="fa-regular fa-phone"></i>
+          <div><strong>Phone</strong> <a href="tel:+27123456789" style="color:#0A3D91; font-weight:600;">+27 12 345 6789</a></div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     TRUST SECTION
+========================= -->
+<section class="trust-section">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-card">
+        <i class="fa-regular fa-star"></i>
+        <h4>Professional Service</h4>
+        <p>We maintain high standards in every interaction.</p>
+      </div>
+      <div class="trust-card">
+        <i class="fa-regular fa-headset"></i>
+        <h4>Reliable Support</h4>
+        <p>Dependable assistance when you need it most.</p>
+      </div>
+      <div class="trust-card">
+        <i class="fa-regular fa-lock"></i>
+        <h4>Secure Communication</h4>
+        <p>Your information is handled with care and confidentiality.</p>
+      </div>
+      <div class="trust-card">
+        <i class="fa-regular fa-clock"></i>
+        <h4>Fast Response</h4>
+        <p>We respond quickly to all service requests.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Datenal Technologies</div>
+        <p>Practical IT solutions, technical support and digital services for modern businesses.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services-it-support.html">IT Support</a></li>
+          <li><a href="services-web-development.html">Website Development</a></li>
+          <li><a href="services-networking.html">Networking</a></li>
+          <li><a href="services-hardware.html">Hardware Solutions</a></li>
+          <li><a href="services-hosting.html">Hosting</a></li>
+          <li><a href="services-software-solutions.html">Software Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Process</a></li>
+          <li><a href="#">Why Choose Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Remote Support</a></li>
+          <li><a href="#">Request Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Datenal Technologies (Pty) Ltd. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+  // =========================
+  // MENU TOGGLE
+  // =========================
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("active");
+    const icon = menuToggle.querySelector("i");
+    if (mainNav.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      mainNav.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
+  });
+
+  // =========================
+  // OTHER SERVICE TOGGLE
+  // =========================
+  const serviceSelect = document.getElementById('service');
+  const otherContainer = document.getElementById('otherServiceContainer');
+  const otherInput = document.getElementById('otherService');
+
+  serviceSelect.addEventListener('change', function() {
+    if (this.value === 'Other') {
+      otherContainer.style.display = 'block';
+      otherInput.setAttribute('required', 'required');
+    } else {
+      otherContainer.style.display = 'none';
+      otherInput.removeAttribute('required');
+      otherInput.value = '';
+    }
+  });
+
+  // =========================
+  // FILE UPLOAD
+  // =========================
+  const fileInput = document.getElementById('fileInput');
+  const fileList = document.getElementById('fileList');
+  const dropZone = document.getElementById('fileDropZone');
+
+  // Click to upload
+  dropZone.addEventListener('click', function() {
+    fileInput.click();
+  });
+
+  // Drag and drop
+  dropZone.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    this.style.borderColor = '#0A3D91';
+    this.style.background = '#edf5ff';
+  });
+
+  dropZone.addEventListener('dragleave', function(e) {
+    e.preventDefault();
+    this.style.borderColor = '#d1d5db';
+    this.style.background = 'white';
+  });
+
+  dropZone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    this.style.borderColor = '#d1d5db';
+    this.style.background = 'white';
+    const files = e.dataTransfer.files;
+    handleFiles(files);
+  });
+
+  fileInput.addEventListener('change', function() {
+    handleFiles(this.files);
+  });
+
+  function handleFiles(files) {
+    for (let file of files) {
+      const tag = document.createElement('span');
+      tag.className = 'file-tag';
+      tag.innerHTML = `<i class="fa-regular fa-file"></i> ${file.name} (${(file.size / 1024).toFixed(0)}KB) <span class="remove-file" onclick="removeFile(this)">&times;</span>`;
+      fileList.appendChild(tag);
+    }
+    fileInput.value = '';
+  }
+
+  function removeFile(el) {
+    el.parentElement.remove();
+  }
+
+  // =========================
+  // FORM VALIDATION
+  // =========================
+  const form = document.getElementById('requestForm');
+  const formContainer = document.getElementById('formContainer');
+  const successMessage = document.getElementById('successMessage');
+
+  function showError(inputId, errorId) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
+    input.classList.add('error');
+    error.classList.add('visible');
+  }
+
+  function clearError(inputId, errorId) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
+    input.classList.remove('error');
+    error.classList.remove('visible');
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function validatePhone(phone) {
+    return /^[\+\d\s\-\(\)]{8,20}$/.test(phone);
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let isValid = true;
+
+    // First Name
+    const firstName = document.getElementById('firstName');
+    if (!firstName.value.trim()) {
+      showError('firstName', 'firstNameError');
+      isValid = false;
+    } else {
+      clearError('firstName', 'firstNameError');
+    }
+
+    // Last Name
+    const lastName = document.getElementById('lastName');
+    if (!lastName.value.trim()) {
+      showError('lastName', 'lastNameError');
+      isValid = false;
+    } else {
+      clearError('lastName', 'lastNameError');
+    }
+
+    // Email
+    const email = document.getElementById('email');
+    if (!validateEmail(email.value.trim())) {
+      showError('email', 'emailError');
+      isValid = false;
+    } else {
+      clearError('email', 'emailError');
+    }
+
+    // Phone
+    const phone = document.getElementById('phone');
+    if (!validatePhone(phone.value.trim())) {
+      showError('phone', 'phoneError');
+      isValid = false;
+    } else {
+      clearError('phone', 'phoneError');
+    }
+
+    // Service
+    const service = document.getElementById('service');
+    if (!service.value) {
+      showError('service', 'serviceError');
+      isValid = false;
+    } else {
+      clearError('service', 'serviceError');
+    }
+
+    // Request Type
+    const requestType = document.getElementById('requestType');
+    if (!requestType.value) {
+      showError('requestType', 'requestTypeError');
+      isValid = false;
+    } else {
+      clearError('requestType', 'requestTypeError');
+    }
+
+    // Subject
+    const subject = document.getElementById('subject');
+    if (!subject.value.trim()) {
+      showError('subject', 'subjectError');
+      isValid = false;
+    } else {
+      clearError('subject', 'subjectError');
+    }
+
+    // Details
+    const details = document.getElementById('details');
+    if (details.value.trim().length < 10) {
+      showError('details', 'detailsError');
+      isValid = false;
+    } else {
+      clearError('details', 'detailsError');
+    }
+
+    // Privacy Consent
+    const privacy = document.getElementById('privacyConsent');
+    if (!privacy.checked) {
+      document.getElementById('privacyError').classList.add('visible');
+      isValid = false;
+    } else {
+      document.getElementById('privacyError').classList.remove('visible');
+    }
+
+    if (isValid) {
+      // Hide form, show success
+      form.style.display = 'none';
+      successMessage.classList.add('visible');
+
+      // Scroll to top of form
+      formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // Real-time validation clearing
+  document.querySelectorAll('input, select, textarea').forEach(function(el) {
+    el.addEventListener('input', function() {
+      const errorId = this.id + 'Error';
+      const errorEl = document.getElementById(errorId);
+      if (errorEl) {
+        this.classList.remove('error');
+        errorEl.classList.remove('visible');
+      }
+    });
+    el.addEventListener('change', function() {
+      const errorId = this.id + 'Error';
+      const errorEl = document.getElementById(errorId);
+      if (errorEl) {
+        this.classList.remove('error');
+        errorEl.classList.remove('visible');
+      }
+    });
+  });
+
+  // =========================
+  // RESET FORM FUNCTION
+  // =========================
+  function resetForm() {
+    form.reset();
+    form.style.display = 'block';
+    successMessage.classList.remove('visible');
+    fileList.innerHTML = '';
+    otherContainer.style.display = 'none';
+    document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+    document.querySelectorAll('.error-message').forEach(el => el.classList.remove('visible'));
+    document.getElementById('privacyError').classList.remove('visible');
+    formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+
+</body>
+</html>

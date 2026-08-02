@@ -140,6 +140,23 @@
       position: relative;
       z-index: 2;
     }
+    .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+.breadcrumb a {
+    color: rgba(255,255,255,0.9);
+    transition: color .25s ease;
+}
+
+.breadcrumb a:hover {
+    color: #7de3f5;
+}
     .eyebrow {
       display: inline-block;
       font-size: 13px;
@@ -800,6 +817,8 @@
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-content">
+      <a href="services.html">Our Services</a><span style="color:rgba(255,255,255,0.4);">/</span> <span style="color:rgba(255,255,255,0.6);">Hardware Solutions</span>
+      </div>
       <span class="eyebrow"><i class="fa-regular fa-microchip" style="margin-right:8px;"></i> Hardware Solutions</span>
       <h1>Reliable Business Hardware <span>That Works as Hard as You Do</span></h1>
       <p>Equip your business with dependable computers, servers, networking equipment and office technology designed to keep your operations running efficiently. Datenal Technologies supplies, installs and supports hardware solutions tailored to your business needs.</p>
@@ -1055,8 +1074,8 @@
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="process.html">Our Process</a></li>
-          <li><a href="why-choose.html">Why Choose Us</a></li>
+          <li><a href="our-process.html">Our Process</a></li>
+          <li><a href="why-choose-us.html">Why Choose Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>

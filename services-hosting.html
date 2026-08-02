@@ -140,6 +140,23 @@
       position: relative;
       z-index: 2;
     }
+    .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+.breadcrumb a {
+    color: rgba(255,255,255,0.9);
+    transition: color .25s ease;
+}
+
+.breadcrumb a:hover {
+    color: #7de3f5;
+}
     .eyebrow {
       display: inline-block;
       font-size: 13px;
@@ -747,6 +764,8 @@
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-content">
+      <a href="services.html">Our Services</a><span style="color:rgba(255,255,255,0.4);">/</span> <span style="color:rgba(255,255,255,0.6);">Hosting</span>
+      </div>
       <span class="eyebrow"><i class="fa-regular fa-server" style="margin-right:8px;"></i> Hosting Solutions</span>
       <h1>Reliable Hosting <span>for Modern Businesses</span></h1>
       <p>Businesses need secure, reliable and fast hosting to keep websites, applications and email services running around the clock. Datenal Technologies provides hosting solutions designed for performance, security, and peace of mind.</p>

@@ -141,6 +141,23 @@
       position: relative;
       z-index: 2;
     }
+    .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+.breadcrumb a {
+    color: rgba(255,255,255,0.9);
+    transition: color .25s ease;
+}
+
+.breadcrumb a:hover {
+    color: #7de3f5;
+}
     .eyebrow {
       display: inline-block;
       font-size: 13px;
@@ -798,6 +815,9 @@
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-content">
+      <div class="breadcrumb">
+        <a href="services.html">Our Services</a><span style="color:rgba(255,255,255,0.4);">/</span> <span style="color:rgba(255,255,255,0.6);">Website Development</span>
+      </div>
       <span class="eyebrow"><i class="fa-regular fa-window-maximize" style="margin-right: 8px;"></i> Website Development</span>
       <h1>Professional Websites <span>That Help Your Business Grow</span></h1>
       <p>Your website is often the first impression customers have of your business. Datenal Technologies designs and develops modern, responsive, and professional websites that strengthen your brand, build credibility, and help you connect with more customers online.</p>
@@ -1057,8 +1077,8 @@
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="process.html">Our Process</a></li>
-          <li><a href="why-choose.html">Why Choose Us</a></li>
+          <li><a href="our-process.html">Our Process</a></li>
+          <li><a href="why-choose-us.html">Why Choose Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>

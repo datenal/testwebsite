@@ -151,6 +151,23 @@
             position: relative;
             z-index: 2;
         }
+        .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+.breadcrumb a {
+    color: rgba(255,255,255,0.9);
+    transition: color .25s ease;
+}
+
+.breadcrumb a:hover {
+    color: #7de3f5;
+}
         .eyebrow {
             display: inline-block;
             font-size: 13px;
@@ -533,7 +550,7 @@
 <header>
     <div class="container navbar">
         <a href="index.html" class="logo">
-            <img src="datenal-logo.png" alt="Datenal Technologies Logo">
+            <img src="datenal-logo.png" alt="Datenal Technologies">
         </a>
         <nav id="mainNav">
             <a href="index.html">Home</a>
@@ -554,6 +571,9 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
+            <div class="breadcrumb">
+        <a href="index.html">Home</a><span style="color:rgba(255,255,255,0.4);">/</span> <span style="color:rgba(255,255,255,0.6);">Our Services</span>
+      </div>
             <span class="eyebrow">What We Do</span>
             <h1>Technology Services <span>Built Around Your Needs</span></h1>
             <p>

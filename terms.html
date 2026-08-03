@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Terms & Conditions · Datenal Technologies</title>
+  <meta name="description" content="Please read these Terms & Conditions carefully before using our website or engaging Datenal Technologies for products or services. They explain your rights, responsibilities and the conditions governing our services." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* =========================
+       RESET & BASE (exact match)
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    /* =========================
+       HEADER (exact match)
+    ========================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: nowrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: clamp(16px, 2vw, 20px);
+      color: #0A3D91;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo img {
+      height: 75px;
+      width: auto;
+      object-fit: contain;
+      max-width: 100%;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #0A3D91;
+    }
+    .nav-button {
+      background: #0A3D91;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 5px;
+    }
+    .nav-button:hover {
+      background: #082f70;
+    }
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 22px;
+      color: #0A3D91;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO (exact match)
+    ========================= */
+    .hero {
+      background: linear-gradient(90deg, rgba(5, 29, 70, .98), rgba(10, 61, 145, .92));
+      color: white;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      right: -170px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero-content {
+      width: 680px;
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.9);
+    }
+    .breadcrumb a {
+      color: rgba(255,255,255,0.9);
+      transition: color .25s ease;
+    }
+    .breadcrumb a:hover {
+      color: #7de3f5;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #7de3f5;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      word-wrap: break-word;
+    }
+    .hero h1 span {
+      color: #00B4D8;
+    }
+    .hero p {
+      max-width: 620px;
+      font-size: clamp(16px, 1.2vw, 18px);
+      color: #e4edf8;
+      margin-bottom: 35px;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s ease;
+      text-align: center;
+    }
+    .btn-primary {
+      background: #00B4D8;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #009abd;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+    }
+    .btn-outline:hover {
+      background: white;
+      color: #0A3D91;
+    }
+
+    /* =========================
+       SECTION (terms content)
+    ========================= */
+    .terms-section {
+      padding: 70px 0 90px 0;
+      background: #ffffff;
+    }
+    .terms-content {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .terms-content h2 {
+      font-size: clamp(24px, 2.6vw, 32px);
+      color: #172033;
+      margin: 40px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .terms-content h2 i {
+      color: #0A3D91;
+      font-size: 26px;
+      width: 32px;
+    }
+    .terms-content h2:first-of-type {
+      margin-top: 0;
+    }
+    .terms-content p {
+      color: #374151;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .terms-content ul {
+      margin: 12px 0 24px 28px;
+      color: #374151;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .terms-content ul li {
+      margin-bottom: 6px;
+    }
+    .terms-card {
+      background: #f7f9fc;
+      border-radius: 12px;
+      padding: 28px 32px;
+      border: 1px solid #e5e7eb;
+      margin: 18px 0 28px 0;
+    }
+    .terms-card p:last-child {
+      margin-bottom: 0;
+    }
+    .terms-highlight {
+      background: #edf5ff;
+      border-left: 4px solid #0A3D91;
+      padding: 16px 24px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+    }
+    .terms-highlight p {
+      margin-bottom: 0;
+      color: #1f2937;
+    }
+
+    /* =========================
+       TRUST SECTION (exact match)
+    ========================= */
+    .trust-section {
+      padding: 40px 0 70px 0;
+      background: #f7f9fc;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .trust-card {
+      border: 1px solid #e5e7eb;
+      padding: 25px 20px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.25s ease;
+    }
+    .trust-card:hover {
+      transform: translateY(-4px);
+      border-color: #b9d5f5;
+      box-shadow: 0 8px 25px rgba(15, 44, 80, 0.06);
+    }
+    .trust-card i {
+      font-size: 32px;
+      color: #0A3D91;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .trust-card h4 {
+      font-size: 16px;
+      color: #172033;
+      margin-bottom: 4px;
+    }
+    .trust-card p {
+      color: #667085;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* =========================
+       FOOTER (exact match)
+    ========================= */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 60px 0 25px;
+      width: 100%;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 45px;
+    }
+    .footer-brand {
+      max-width: 330px;
+    }
+    .footer-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    footer h4 {
+      color: white;
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+    footer ul {
+      list-style: none;
+    }
+    footer li {
+      margin-bottom: 10px;
+    }
+    footer li a {
+      color: #9ca3af;
+      font-size: 13px;
+      transition: .2s;
+    }
+    footer li a:hover {
+      color: white;
+    }
+    .footer-bottom {
+      border-top: 1px solid #293241;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 12px;
+      color: #8993a3;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       RESPONSIVE (exact match)
+    ========================= */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        padding: 15px 5%;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+      }
+      .nav-button {
+        border-radius: 0;
+        text-align: center;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero {
+        min-height: 400px;
+      }
+      .hero h1 {
+        font-size: clamp(32px, 8vw, 44px);
+        letter-spacing: -1px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .terms-section {
+        padding: 50px 0 60px 0;
+      }
+      .terms-content ul {
+        margin-left: 18px;
+      }
+      .terms-card {
+        padding: 20px 18px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 12px;
+        width: 96%;
+      }
+      .navbar {
+        min-height: 70px;
+      }
+      .logo img {
+        height: 55px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero {
+        min-height: 360px;
+      }
+      .hero h1 {
+        font-size: clamp(26px, 7vw, 34px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =========================
+     HEADER (exact match)
+========================= -->
+<header>
+  <div class="container navbar">
+    <a href="#" class="logo">
+      <img src="datenal-logo.png" alt="Datenal Technologies Logo" />
+    </a>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="request-form.html">Request Form</a>
+      <a href="contact.html" class="nav-button">Contact Us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- =========================
+     HERO (exact match)
+========================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span style="color:rgba(255,255,255,0.4);">/</span> <span style="color:rgba(255,255,255,0.6);">Terms & Conditions</span>
+      </div>
+      <span class="eyebrow"><i class="fa-regular fa-scale-balanced" style="margin-right:8px;"></i> Legal</span>
+      <h1>Terms &amp; <span>Conditions</span></h1>
+      <p>Please read these Terms & Conditions carefully before using our website or engaging Datenal Technologies for products or services. They explain your rights, responsibilities and the conditions governing our services.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="request-form.html" class="btn btn-outline">Request a Service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     TERMS CONTENT
+========================= -->
+<section class="terms-section">
+  <div class="container">
+    <div class="terms-content">
+
+      <!-- 1. Introduction -->
+      <h2><i class="fa-regular fa-circle-info"></i> Introduction</h2>
+      <p>Welcome to Datenal Technologies (Pty) Ltd. These Terms & Conditions govern your use of our website, products, and services. By accessing our website or engaging our services, you agree to be bound by these Terms. If you do not agree, please discontinue use of our website and services immediately.</p>
+      <p>These Terms apply to all visitors, clients, and users of our website and services, and they form a legally binding agreement between you and Datenal Technologies.</p>
+
+      <!-- 2. Definitions -->
+      <h2><i class="fa-regular fa-book"></i> Definitions</h2>
+      <ul>
+        <li><strong>Company</strong> – Datenal Technologies (Pty) Ltd, its employees, agents, and affiliates.</li>
+        <li><strong>Client</strong> – any person, business, or entity that uses our website or engages our services.</li>
+        <li><strong>Website</strong> – datenal.co.za and all associated subdomains and pages.</li>
+        <li><strong>Services</strong> – IT support, website development, networking, hardware, software, hosting, consulting, and any other solutions provided by the Company.</li>
+        <li><strong>Products</strong> – any hardware, software, or third-party offerings supplied by the Company.</li>
+        <li><strong>Agreement</strong> – these Terms & Conditions together with any quotations, proposals, or contracts accepted by the Client.</li>
+      </ul>
+
+      <!-- 3. Services -->
+      <h2><i class="fa-regular fa-bolt"></i> Services</h2>
+      <p>Datenal Technologies provides a range of IT and digital services, including but not limited to:</p>
+      <ul>
+        <li>IT Support (remote and onsite)</li>
+        <li>Website Development and Design</li>
+        <li>Networking Solutions</li>
+        <li>Hardware Solutions and Procurement</li>
+        <li>Software Solutions and Licensing</li>
+        <li>Website Hosting and Maintenance</li>
+        <li>Business Consulting and Managed IT Services</li>
+      </ul>
+      <p>Service availability may vary, and the Company reserves the right to update or modify its service offerings at any time.</p>
+
+      <!-- 4. Quotations & Pricing -->
+      <h2><i class="fa-regular fa-file-invoice"></i> Quotations &amp; Pricing</h2>
+      <p>All quotations provided by Datenal Technologies are valid for the period stated in the quotation. Prices are subject to change without prior notice. Custom projects require a formal quotation that must be accepted before work commences. Prices may exclude third-party licensing, hardware costs, taxes, or delivery unless explicitly stated.</p>
+      <div class="terms-highlight">
+        <p><i class="fa-regular fa-pen" style="margin-right:10px; color:#0A3D91;"></i> A quotation does not constitute a binding contract until accepted by the Client and confirmed by the Company.</p>
+      </div>
+
+      <!-- 5. Payments -->
+      <h2><i class="fa-regular fa-credit-card"></i> Payments</h2>
+      <p>Payment terms will be agreed upon before the commencement of any service. Deposits may be required for larger projects or custom development. Outstanding invoices may attract interest at the maximum rate permitted by South African law. The Company reserves the right to suspend services for overdue accounts.</p>
+
+      <!-- 6. Project Delivery -->
+      <h2><i class="fa-regular fa-truck-fast"></i> Project Delivery</h2>
+      <p>Timelines provided are estimates based on the information available at the time. Delays caused by the Client's failure to provide required information, approvals, or access may affect delivery dates. The Company will endeavour to meet deadlines but cannot be held liable for delays caused by unforeseen circumstances or third-party factors.</p>
+
+      <!-- 7. Client Responsibilities -->
+      <h2><i class="fa-regular fa-user-gear"></i> Client Responsibilities</h2>
+      <p>Clients agree to:</p>
+      <ul>
+        <li>Provide accurate and complete information necessary for the delivery of services</li>
+        <li>Cooperate fully with the Company's team during projects</li>
+        <li>Supply required access credentials and permissions in a timely manner</li>
+        <li>Maintain lawful use of the services and website</li>
+        <li>Review completed work promptly and provide feedback</li>
+      </ul>
+
+      <!-- 8. Website Development -->
+      <h2><i class="fa-regular fa-code"></i> Website Development</h2>
+      <p>For website development projects, Clients are responsible for providing all content (text, images, videos, etc.) in a timely manner. The Client retains copyright over their supplied materials. The Company provides a defined number of revisions as specified in the project scope. Additional work outside the agreed scope will be quoted separately. Hosting, domain registration, and third-party software may be subject to separate terms.</p>
+
+      <!-- 9. Hardware Solutions -->
+      <h2><i class="fa-regular fa-microchip"></i> Hardware Solutions</h2>
+      <p>Hardware availability is subject to supplier stock and market conditions. Warranty terms for hardware are provided by the manufacturer and may vary. The Company offers installation and setup services, but hardware failures due to manufacturing defects, misuse, or external factors are beyond our control.</p>
+
+      <!-- 10. Software Solutions -->
+      <h2><i class="fa-regular fa-cubes"></i> Software Solutions</h2>
+      <p>Clients are responsible for complying with all software licensing requirements. Subscription renewals are the Client's responsibility unless otherwise agreed. Third-party software providers may have their own terms and conditions that apply. The Company does not guarantee compatibility with all third-party systems.</p>
+
+      <!-- 11. Hosting Services -->
+      <h2><i class="fa-regular fa-server"></i> Hosting Services</h2>
+      <p>We strive to provide reliable hosting services with high uptime, but we do not guarantee 100% uptime. Scheduled maintenance may occur during off-peak hours. Backups are performed on a regular basis, but Clients are encouraged to maintain their own backups. Storage limits and acceptable use policies apply. Hosting services may be suspended if they are used for abusive or illegal purposes.</p>
+
+      <!-- 12. IT Support -->
+      <h2><i class="fa-regular fa-headset"></i> IT Support</h2>
+      <p>Support is provided during business hours (Monday – Friday, 08:00 – 17:00 SAST) unless otherwise agreed. Response times are based on the priority level of the request. Remote support is our primary delivery method, but onsite support can be arranged. Emergency support is available for critical issues; additional charges may apply.</p>
+
+      <!-- 13. Intellectual Property -->
+      <h2><i class="fa-regular fa-copyright"></i> Intellectual Property</h2>
+      <p>Datenal Technologies retains all rights to its branding, designs, software, documentation, and proprietary materials. Clients retain ownership of content they provide. Third-party software remains the property of its respective owners. Unless otherwise agreed, nothing in these Terms transfers intellectual property rights to the Client.</p>
+
+      <!-- 14. Acceptable Use -->
+      <h2><i class="fa-regular fa-circle-check"></i> Acceptable Use</h2>
+      <p>Users must not:</p>
+      <ul>
+        <li>Misuse the website or services in any way</li>
+        <li>Attempt unauthorised access to systems or data</li>
+        <li>Upload or distribute malicious software (viruses, worms, etc.)</li>
+        <li>Interfere with the normal operation of our systems</li>
+        <li>Violate any applicable laws or regulations</li>
+        <li>Infringe upon the intellectual property rights of others</li>
+      </ul>
+
+      <!-- 15. Limitation of Liability -->
+      <h2><i class="fa-regular fa-triangle-exclamation"></i> Limitation of Liability</h2>
+      <p>To the maximum extent permitted by South African law, Datenal Technologies shall not be liable for:</p>
+      <ul>
+        <li>Indirect, special, or consequential losses</li>
+        <li>Business interruption, loss of profits, or loss of data</li>
+        <li>Failures caused by third-party providers, internet outages, or force majeure events</li>
+        <li>Any damages arising from the use or inability to use our services</li>
+      </ul>
+      <p>Our total liability shall be limited to the amount paid by the Client for the specific service in question.</p>
+
+      <!-- 16. Warranties -->
+      <h2><i class="fa-regular fa-certificate"></i> Warranties</h2>
+      <p>We deliver our services with reasonable care and skill. However, we do not guarantee that services will be uninterrupted or error-free. Third-party products are subject to the warranties provided by their manufacturers. All other warranties, express or implied, are excluded to the extent permitted by law.</p>
+
+      <!-- 17. Privacy -->
+      <h2><i class="fa-regular fa-lock"></i> Privacy</h2>
+      <p>Your privacy is important to us. The collection and use of your personal information are governed by our <a href="privacy-policy.html" style="color:#0A3D91; font-weight:600;">Privacy Policy</a>, which forms an integral part of these Terms. Please review our Privacy Policy to understand how we handle your data.</p>
+
+      <!-- 18. Termination -->
+      <h2><i class="fa-regular fa-ban"></i> Termination</h2>
+      <p>Either party may terminate services in accordance with the terms of the specific contract or agreement. Upon termination, the Client remains responsible for any outstanding balances. The Company may suspend or terminate access to services if the Client breaches these Terms.</p>
+
+      <!-- 19. Governing Law -->
+      <h2><i class="fa-regular fa-gavel"></i> Governing Law</h2>
+      <p>These Terms & Conditions are governed by and interpreted in accordance with the laws of the Republic of South Africa. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa.</p>
+
+      <!-- 20. Changes to These Terms -->
+      <h2><i class="fa-regular fa-pen-to-square"></i> Changes to These Terms</h2>
+      <p>Datenal Technologies reserves the right to update these Terms from time to time. Changes will be effective upon posting on this page with a revised "Last Updated" date. Continued use of the website or services after changes are posted constitutes acceptance of the updated Terms.</p>
+      <div class="terms-card">
+        <p><i class="fa-regular fa-calendar-check" style="margin-right:10px; color:#0A3D91;"></i> <strong>Last Updated:</strong> 03 August 2026</p>
+      </div>
+
+      <!-- 21. Contact Information -->
+      <h2><i class="fa-regular fa-address-card"></i> Contact Information</h2>
+      <p>If you have any questions, concerns, or requests regarding these Terms & Conditions, please contact us:</p>
+      <div class="terms-card" style="display: grid; gap: 8px; grid-template-columns: 1fr 1fr; margin-top: 10px;">
+        <div><i class="fa-regular fa-building" style="width:24px; color:#0A3D91;"></i> <strong>Datenal Technologies (Pty) Ltd</strong></div>
+        <div><i class="fa-regular fa-envelope" style="width:24px; color:#0A3D91;"></i> <a href="mailto:support@datenal.co.za" style="color:#0A3D91; font-weight:600;">support@datenal.co.za</a></div>
+        <div><i class="fa-regular fa-phone" style="width:24px; color:#0A3D91;"></i> <a href="tel:+27123456789" style="color:#0A3D91; font-weight:600;">+27 12 345 6789</a></div>
+        <div><i class="fa-regular fa-globe" style="width:24px; color:#0A3D91;"></i> <a href="#" style="color:#0A3D91; font-weight:600;">datenal.co.za</a></div>
+        <div style="grid-column: span 2;"><i class="fa-regular fa-location-dot" style="width:24px; color:#0A3D91;"></i> <strong>Business Address:</strong> 123 Pretoria Street, Hatfield, Pretoria, 0028, South Africa</div>
+      </div>
+      <p style="margin-top: 20px;">We are committed to providing clear and fair Terms & Conditions for all our clients.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     TRUST SECTION (exact match)
+========================= -->
+<section class="trust-section">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-card">
+        <i class="fa-regular fa-star"></i>
+        <h4>Professional Service</h4>
+        <p>We maintain high standards in every interaction.</p>
+      </div>
+      <div class="trust-card">
+        <i class="fa-regular fa-headset"></i>
+        <h4>Reliable Support</h4>
+        <p>Dependable assistance when you need it most.</p>
+      </div>
+      <div class="trust-card">
+        <i class="fa-regular fa-lock"></i>
+        <h4>Secure Communication</h4>
+        <p>Your information is handled with care and confidentiality.</p>
+      </div>
+      <div class="trust-card">
+        <i class="fa-regular fa-clock"></i>
+        <h4>Fast Response</h4>
+        <p>We respond quickly to all service requests.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER (exact match)
+========================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Datenal Technologies</div>
+        <p>Practical IT solutions, technical support and digital services for modern businesses.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services-it-support.html">IT Support</a></li>
+          <li><a href="services-web-development.html">Website Development</a></li>
+          <li><a href="services-networking.html">Networking</a></li>
+          <li><a href="services-hardware.html">Hardware Solutions</a></li>
+          <li><a href="services-hosting.html">Hosting</a></li>
+          <li><a href="services-software-solutions.html">Software Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Process</a></li>
+          <li><a href="#">Why Choose Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Remote Support</a></li>
+          <li><a href="#">Request Form</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Datenal Technologies (Pty) Ltd. All rights reserved.</span>
+      <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================
+     JAVASCRIPT (exact match)
+========================= -->
+<script>
+  // =========================
+  // MENU TOGGLE
+  // =========================
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("active");
+    const icon = menuToggle.querySelector("i");
+    if (mainNav.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      mainNav.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
+  });
+</script>
+
+</body>
+</html>
